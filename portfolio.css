@@ -2,6 +2,20 @@
 body {
 	background-color : white;
 }
+container {
+    display: flex;
+}
+
+.column1 {
+    background-color: green;
+    flex: 1;
+}
+
+.column2 {
+    background-color: pink;
+    flex: 4;
+}
+
 
 h1 {
 	color: black;
@@ -38,21 +52,5 @@ nav li a:hover {
 	background-color: #3779a3;
 	color: white
 
-div {
-    column-count: 2;
-}
 
-.column {
-    float: left;
-    width: 50%;
-}
 
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-section {
-    display: block;
-}
