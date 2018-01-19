@@ -1,0 +1,58 @@
+
+body {
+	background-color : white;
+}
+
+h1 {
+	color: black;
+	text-align: left;
+}
+
+p { 
+	font-family: verdana;
+	font-size: 14px;
+	font-color: black;
+}
+
+nav ul { 
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 200px; 
+	background-color: #f1f1f1;
+}
+
+nav li a{
+	display: block;
+	color: #000;
+	padding: 8px 16px;
+	text-decoration: none;
+}
+
+nav li a:hover {
+	background-color: #555;
+	color: white;
+}
+
+.active {
+	background-color: #3779a3;
+	color: white
+
+div {
+    column-count: 2;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+section {
+    display: block;
+}
