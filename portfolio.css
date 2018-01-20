@@ -2,18 +2,17 @@
 body {
 	background-color : white;
 }
-container {
+.container {
     display: flex;
 }
 
 .column1 {
-    background-color: green;
     flex: 1;
+	background-color: white;
 }
 
 .column2 {
-    background-color: pink;
-    flex: 4;
+     flex: 4;
 }
 
 
@@ -32,8 +31,8 @@ nav ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	width: 200px; 
-	background-color: #f1f1f1;
+	width: 260px; 
+	background-color: white;
 }
 
 nav li a{
@@ -51,6 +50,6 @@ nav li a:hover {
 .active {
 	background-color: #3779a3;
 	color: white
-
+}
 
 
