@@ -1,19 +1,27 @@
 
 body {
 	background-color : white;
-}
-container {
-    display: flex;
+	margin: 0px;
 }
 
-.column1 {
-    background-color: green;
-    flex: 1;
+#logo{
+	height: 200px;
+}
+
+#header {
+		background: linear-gradient(to right, #b5d1ff , #360082);
+    height: 700px;
+    width: 100%;
+
+}
+
+#menu {
+		margin-left: 5%;
+		padding-top: 5%;
 }
 
 .column2 {
     background-color: pink;
-    flex: 4;
 }
 
 
@@ -22,17 +30,17 @@ h1 {
 	text-align: left;
 }
 
-p { 
+p {
 	font-family: verdana;
 	font-size: 14px;
 	font-color: black;
 }
 
-nav ul { 
+nav ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	width: 200px; 
+	width: 200px;
 	background-color: #f1f1f1;
 }
 
@@ -51,6 +59,3 @@ nav li a:hover {
 .active {
 	background-color: #3779a3;
 	color: white
-
-
-
