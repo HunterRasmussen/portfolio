@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<p>
+import bpy
+
+class  SpaceObjectPanel(bpy.types.Panel):
+    bl_label = "Space"
+    bl_space_type = "PROPERTIES"
+    bl_region_type = "WINDOW"
+    bl_context = "object"
+    bl_idname = "space.object_panel"
+    
+    @classmethod
+    def poll(self, context):
+        if context.object and context.object.type == 'MESH':
+            return True
+        else:
+            return False
+    
+    def draw(self,context):
+        layout = self.layout
+        layout.operator(SetupTriggerOperator.bl_idname)
+
+class SetupTriggerOperator(bpy.types.Operator):
+     bl_idname = "space.setup_trigger"
+     bl_label = "Trigger Setup"
+     
+     
+     """grab object mesh and camera
+     set actor propert to view_trigger
+     set tap enable to 1
+     set view to name of camera
+     in display properties trasparency = true
+     """        
+     def execute(self, context):
+        OBJECT_COLOR = (0.0, 0.0, 1.0, 0.25)
+        objects = []
+        camera = None
+        for object in context.selected_objects:
+            if object.type == "CAMERA":
+                camera = object;
+            elif object.type == "MESH":
+                objects.append(object)
+        
+        if camera == None or len(objects) == 0:
+            #print("INVALID SELECTION OF OBJECTS")
+            self.report({'ERROR_INVALID_INPUT'},"Invalid Selection: Select view Camera and a Mesh Object")
+            return {'CANCELLED'}
+         
+        for object in objects:
+            object["actor"] = "view_trigger"
+            object["tap_enabled"] = 1
+            object["view"] = camera.data.name
+            object.show_transparent = True
+            object.show_wire = True  
+            object.color = OBJECT_COLOR
+            
+        return {'FINISHED'}   
+
+class SpaceCameraPanel(bpy.types.Panel):
+    bl_label = "Space"
+    bl_space_type = "PROPERTIES"
+    bl_region_type = "WINDOW"
+    bl_context = "data"
+    bl_idname = "space.camera_panel"
+    
+    @classmethod
+    def poll(self, context):
+        if context.object and context.object.type == 'LAMP':
+            return True
+        else:
+            return False
+        
+    
+    def draw(self,context):
+        layout = self.layout
+        layout.operator(SetupViewOperator.bl_idname)
+    
+    
+    
+class SetupViewOperator(bpy.types.Operator):
+    bl_idname = "space.setup_view"
+    bl_label = "View Setup"
+    
+    """
+    primary and secondary lights
+    sensor width 32 mil
+    sensor height 24mil
+    sensor fit= vertical
+    Lens unit = field of view
+    Light needs to be the light_properties name
+    light_primary
+    light_secondary
+    these contain the name of those lights
+    create a button on the camera panel to do all that
+    near = .5
+    far = 25
+    first select secondary light, then camera, then primary     light
+    """
+    
+    def execute(self,context):
+        CAMERA_CLIPPING_NEAR = .5
+        CAMERA_CLIPPING_FAR = 25
+        CAMERA_SENSOR_WIDTH = 32.0
+        CAMERA_SENSOR_HEIGHT = 24.0
+        camera = None
+        primary_light = None
+        secondary_light = None     
+        for object in context.selected_objects:
+            if object == context.active_object:
+                if object.type == "LAMP":
+                    primary_light = object
+            elif object.type == "CAMERA":
+                camera = object
+            elif object.type == "LAMP":
+                secondary_light = object   
+
+        if camera is None or primary_light is None or secondary_light is None:
+            self.report({"ERROR_INVALID_INPUT"}, "Invalid Selection:  First select secondary light, then camera, then primary light")
+            return {'CANCELLED'}
+    
+        camera.data.lens_unit = "FOV"    
+        camera.data.sensor_fit = "VERTICAL"
+        camera.data.sensor_width = CAMERA_SENSOR_WIDTH
+        camera.data.sensor_height = CAMERA_SENSOR_HEIGHT
+        camera.data.clip_start = CAMERA_CLIPPING_NEAR
+        camera.data.clip_end = CAMERA_CLIPPING_FAR
+        camera.data["light_primary"] = primary_light.data.name
+        camera.data["light_secondary"] = secondary_light.data.name 
+        return {'FINISHED'}
+            
+bpy.utils.register_class(SpaceObjectPanel)
+bpy.utils.register_class(SetupTriggerOperator)
+bpy.utils.register_class(SpaceCameraPanel)
+bpy.utils.register_class(SetupViewOperator)
+
+</p>
+
+</html>
