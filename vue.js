@@ -12,10 +12,13 @@ new Vue({
   },
 
   methods: {
-    mouseOver: function() {
-      //this.menu = 'MENU |';
-      this.hoverMenu = !this.hoverMenu;
-    }
+    turnMenuOn: function() {
+
+      this.hoverMenu = true;
+    },
+    turnMenuOff: function() {
+      this.hoverMenu = false;
+    },
   }
 
 

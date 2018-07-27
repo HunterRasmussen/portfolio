@@ -13,21 +13,15 @@
             src = "SVG/rounded_dark.svg"
             height = "87px"
             >
-            <div v-on:mouseover="active = !active" v-if="active">
-              <p>{{menuhover}}</p>
-           </div>
+        <div id="menu_button_bg" v-on:mouseover = "turnMenuOff"></div>
 
-           <div v-on:mouseover="active = !active" v-else-if="!active">
-              <p>{{menu}}</p>
-           </div>
-
-        <!--  <div id="menu_button" v-on:mouseover = "mouseOver">
+         <div id="menu_button" v-on:mouseover = "turnMenuOn">
             <div v-if="hoverMenu">
               <p>{{menuhover}}</p>
             </div>
             <div v-else-if="!hoverMenu">
               <p>{{menu}}
-            </div>-->
+            </div>
 
 
           </div>

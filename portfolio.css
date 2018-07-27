@@ -32,6 +32,12 @@ body {
 	//background-color: white;
 }
 
+#menu_button_bg {
+	position: absolute;
+	height:250px;
+	width: 2000px;
+}
+
 .column2 {
     background-color: pink;
 }
