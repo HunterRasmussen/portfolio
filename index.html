@@ -7,19 +7,36 @@
 
 
 <body>
-
+    <div id="root" >
         <div id = "header">
-          <img src="hrLogo.png" alt = "logo" id = "logo"></img>
-            <nav id= "menu">
-                <ul>
-                    <li class="active"><a href = "index.html">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href= "experience.html">Work Experience </a></li>
-                    <li><a href = "contact.html">Contact Me </a></li>
-                </ul>
-            </nav>
-        </div>
+          <img id = "logo"
+            src = "SVG/rounded_dark.svg"
+            height = "87px"
+            >
+            <div v-on:mouseover="active = !active" v-if="active">
+              <p>{{menuhover}}</p>
+           </div>
 
+           <div v-on:mouseover="active = !active" v-else-if="!active">
+              <p>{{menu}}</p>
+           </div>
+
+        <!--  <div id="menu_button" v-on:mouseover = "mouseOver">
+            <div v-if="hoverMenu">
+              <p>{{menuhover}}</p>
+            </div>
+            <div v-else-if="!hoverMenu">
+              <p>{{menu}}
+            </div>-->
+
+
+          </div>
+
+        </div>
+        <div id = "menu_dropdown">
+
+        </div>
+    </div>
 
       <!--  <div class = "column2">
             <h1>Hunter Rasmussen</h1>
@@ -28,12 +45,33 @@
             <hr>
             <p> I grew up in California.  I was an avid film maker in high school and won numerous awards at film festivals. I'm currently aspiring to be a technial artist and I love creating and learning.
              </p>
+
+
+
+             <img id = "logo"
+               src = "SVG/HR_logo_dark.svg"
+               height = "87px"
+               >
+
+             <img src="hrLogo.png" alt = "logo" id = "logo"></img>
+
+
+
+             <nav id= "menu">
+                 <ul>
+                     <li class="active"><a href = "index.html">Home</a></li>
+                     <li><a href="projects.html">Projects</a></li>
+                     <li><a href= "experience.html">Work Experience </a></li>
+                     <li><a href = "contact.html">Contact Me </a></li>
+                 </ul>
+             </nav>
+
+
 <<<<<<< HEAD
-       </div>-->
-</body
-=======
-       </div>
-    </div>
+ </div>-->
+
+ <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+ <script src="vue.js"></script>
 </body>
->>>>>>> 9fed38e9b33901d6d6dc2b5d2619b0ddb6586ea6
+
 </html>
