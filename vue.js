@@ -4,21 +4,24 @@ new Vue({
 
   data: {
 
-    menu: 'MENU -',
+    menu: 'MENU |',
     menuhover: 'MENU ||',
+    menuDown: 'MENU X',
+    menuShow: false,
     hoverMenu: false,
-    active: false,
+    showMenu: false,
 
   },
 
   methods: {
-    turnMenuOn: function() {
-
-      this.hoverMenu = true;
-    },
-    turnMenuOff: function() {
+    showMenuFunction: function() {
+      this.showMenu = !this.showMenu;
       this.hoverMenu = false;
+      console.log(this.$refs.myMenu)
+      this.$refs.myMenu.id = "menuDropDown";
+
     },
+
   }
 
 

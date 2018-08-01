@@ -6,8 +6,9 @@ body {
 
 #logo{
 	position: absolute;
-	left: 900px;
-	top: 50px;
+	left: 50%;
+	top: 70px;
+	opacity: .6;
 }
 
 #header {
@@ -24,35 +25,122 @@ body {
 
 #menu_button {
 	position: absolute;
+	top: 0px;
+	left: 0px;
 	height: 200px;
 	width: 150px;
 	text-align: center;
+	padding-left: 10px;
 	vertical-align: middle;
 	line-height: 150px;
-	//background-color: white;
+	letter-spacing: 6px;
 }
 
-#menu_button_bg {
-	position: absolute;
-	height:250px;
-	width: 2000px;
+#hoverMenu_false{
+
+	transition: .25s;
 }
 
-.column2 {
-    background-color: pink;
+#hoverMenu_true{
+	transform: rotate(90deg);
+	transition: .25s;
+
+}
+
+#showingMenu {
+	transform: rotate(90deg);
+	transition: .25s
+}
+
+#hoverMenu_true p {
+	text-shadow: 2px 2px 6px #4e4e4e;
+	font-size: 12px;
+	transition: .25s;
+
 }
 
 
-h1 {
-	color: black;
-	text-align: left;
+#hoverMenu_false p {
+	font-size: 12px;
+	transition: .25s;
+	text-orientation: upright;
 }
+
+#showingMenu p {
+	font-size: 12px;
+	transition: .25s;
+	text-orientation: upright;
+}
+
+#showingMenu p:hover{
+	text-shadow: 2px 2px 6px #4e4e4e;
+	font-size: 12px;
+}
+
+
+#menuDropDown{
+  width: 115%;
+  height: 500px;
+  background-color: white;
+  padding: none;
+  animation-name: menuBounce;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  cubic-bezier(.215,.61,.355,1)
+  animation-iteration-count: 10;
+	transition: translateY 2s;
+
+
+}
+
+
+
+
+
+
+
+/*----------------------------------------------------------------------------*/
+/*---------------------------------Animations---------------------------------*/
+/*----------------------------------------------------------------------------*/
+
+@keyframes menuBounce {
+  0%,15%{
+    transform: translateY(-100%);  /*starts not visible*/
+  }
+  40%{  /*left corner hits the bottom*/
+    animation-timing-function: cubic-bezier(.28,.01,1,.56);
+    transform: rotateZ(-6deg) skewX(-6deg) translate(-1%,-20%);
+  }
+  45%,48%{ /*left corner bounces up a bit and right corner starts to fall*/
+    /*animation-timing-function: linear;*/
+		animation-timing-function: ease-in;
+    transform: rotateZ(-4deg) skewX(-4deg) translate(-1%,-12%);
+  }
+  55%{
+    animation-timing-function: cubic-bezier(.44,0,1,.56);
+    transform: rotateZ(-5deg) skewX(-5deg) translate(-1%,-15%);
+  }
+  70%{
+    animation-timing-function: cubic-bezier(.44,0,1,.56);
+    transform: translateY(0%)
+  }
+  100%{
+    /*animation-timing-function: cubic-bezier(.44,0,1,.56);*/
+		animation-timing-function: ease-in;
+    transform: translateY(0%)
+  }
+
+}
+
 
 p {
 	font-family: verdana;
 	font-size: 14px;
 	font-color: black;
 }
+
+
 
 nav ul {
 	list-style-type: none;
@@ -77,9 +165,4 @@ nav li a:hover {
 .active {
 	background-color: #3779a3;
 	color: white
-<<<<<<< HEAD
-=======
 }
-
-
->>>>>>> 9fed38e9b33901d6d6dc2b5d2619b0ddb6586ea6

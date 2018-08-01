@@ -11,25 +11,31 @@
         <div id = "header">
           <img id = "logo"
             src = "SVG/rounded_dark.svg"
-            height = "87px"
+            height = "40px"
             >
-        <div id="menu_button_bg" v-on:mouseover = "turnMenuOff"></div>
+            <div ref="myMenu" v-if="showMenu">
 
-         <div id="menu_button" v-on:mouseover = "turnMenuOn">
-            <div v-if="hoverMenu">
-              <p>{{menuhover}}</p>
             </div>
-            <div v-else-if="!hoverMenu">
-              <p>{{menu}}
+            <div id="menu_button" v-on:mouseover = "hoverMenu = true" v-on:mouseleave = "hoverMenu = false" v-on:click = "showMenuFunction">
+              <div v-if="!showMenu">
+                  <div v-if="hoverMenu" id = "hoverMenu_true">
+                  <p>{{menuhover}}</p>
+                </div>
+                <div v-else-if="!hoverMenu" id = "hoverMenu_false">
+                  <p>{{menu}}<p>
+                </div>
+              </div>
+              <div v-else-if="showMenu" id ="showingMenu">
+                <p>{{menuDown}}</p>
+              </div>
             </div>
-
-
-          </div>
-
+            <img id = "logo"
+              src = "SVG/rounded_dark.svg"
+              height = "40px"
+              >
         </div>
-        <div id = "menu_dropdown">
 
-        </div>
+
     </div>
 
       <!--  <div class = "column2">
