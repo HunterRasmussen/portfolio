@@ -17,8 +17,13 @@ new Vue({
     showMenuFunction: function() {
       this.showMenu = !this.showMenu;
       this.hoverMenu = false;
-      console.log(this.$refs.myMenu)
-      this.$refs.myMenu.id = "menuDropDown";
+      if(this.$refs.myMenu.id == "menuDropDown"){
+        this.$refs.myMenu.id = "menuHidden";
+      }
+      else{
+        this.$refs.myMenu.id = "menuDropDown";
+      }
+      console.log(this.$refs.myMenu.id)
 
     },
 

@@ -88,10 +88,20 @@ body {
   animation-delay: 0s;
   animation-fill-mode: forwards;
   cubic-bezier(.215,.61,.355,1)
-  animation-iteration-count: 10;
-	transition: translateY 2s;
+  /*transition: translateY 2s;*/
 
 
+}
+
+#menuhidden{
+	width: 115%;
+	height: 500px;
+	background-color: white;
+	padding: none;
+	animation-name: hideMenu;
+	animation-duration: 2s;
+	animation-delay: 2s;
+	animation-fill-mode: backwards;
 }
 
 
@@ -131,6 +141,18 @@ body {
     transform: translateY(0%)
   }
 
+}
+
+@keyframes hideMenu {
+	0%{
+		transform: translateY(0%);
+	}
+	40%{
+		transform: translateY(10%);
+	}
+	100%{
+		transform: translateY(-100%);
+	}
 }
 
 
