@@ -1,14 +1,6 @@
-
 body {
 	background-color : white;
 	margin: 0px;
-}
-
-#logo{
-	position: absolute;
-	left: 50%;
-	top: 70px;
-	opacity: .6;
 }
 
 #header {
@@ -17,6 +9,28 @@ body {
     width: 100%;
 
 }
+
+#logo{
+	position: absolute;
+	left: 50%;
+	top: 70px;
+	opacity: .6;
+	transition: 0.2s;
+	transition-delay: .4s;
+	transition-timing-function: ease-in-out;
+}
+
+#logoWithMenu{
+	position: absolute;
+	left: 50%;
+	top: 50px;
+	opacity: .6;
+	transition: 0.2s;
+	transition-delay: .2s;
+	transition-timing-function: ease-in-out;
+
+}
+
 
 #menu {
 		margin-left: 5%;
@@ -84,7 +98,7 @@ body {
   background-color: white;
   padding: none;
   animation-name: menuBounce;
-  animation-duration: 2s;
+  animation-duration: 1.5s;
   animation-delay: 0s;
   animation-fill-mode: forwards;
   cubic-bezier(.215,.61,.355,1)
@@ -93,22 +107,60 @@ body {
 
 }
 
-#menuhidden{
+#menuHidden{
 	width: 115%;
 	height: 500px;
 	background-color: white;
 	padding: none;
 	animation-name: hideMenu;
-	animation-duration: 2s;
-	animation-delay: 2s;
-	animation-fill-mode: backwards;
+	animation-duration: 1s;
+	animation-delay: 0s;
+	animation-fill-mode: forwards;
 }
 
+#notMenuItems{
+	visibility: hidden;
+	position: absolute;
+}
+
+#menuItems{
+	position: absolute;
+	left: 7%;
+	top: 20%;
+	line-height: 50px;
+	list-style-type: none;
 
 
 
+}
 
+#menuItems li{
+	animation-name: fadeInRight;
+	animation-duration: 2s;
+}
 
+ li:nth-child(1){
+	opacity: 0;
+	animation-delay: 1s;
+	animation-fill-mode: forwards;
+}
+#menuItems li:nth-child(2){
+	opacity: 0;
+	animation-delay: 1.2s;
+	animation-fill-mode: forwards;
+
+}
+#menuItems li:nth-child(3){
+	opacity: 0;
+	animation-delay: 1.4s;
+	animation-fill-mode: forwards;
+
+}
+#menuItems li:nth-child(4){
+	opacity: 0;
+	animation-delay: 1.6s;
+	animation-fill-mode: forwards;
+}
 
 /*----------------------------------------------------------------------------*/
 /*---------------------------------Animations---------------------------------*/
@@ -147,13 +199,35 @@ body {
 	0%{
 		transform: translateY(0%);
 	}
-	40%{
-		transform: translateY(10%);
+	20%{
+		transform: scaleY(1.2);
 	}
 	100%{
+		animation-timing-function: linear;
 		transform: translateY(-100%);
 	}
 }
+
+@keyframes fadeInRight {
+	0%{
+		opacity: 0;
+		transform: translateX(100px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+/*----------------------------------------------------------------------------*/
+/*---------------------------------END Anims----------------------------------*/
+/*----------------------------------------------------------------------------*/
+
+
+
+/*----------------------------------------------------------------------------*/
+/*---------------------------------OLD PORT-----------------------------------*/
+/*----------------------------------------------------------------------------*/
 
 
 p {

@@ -9,30 +9,30 @@
 <body>
     <div id="root" >
         <div id = "header">
-          <img id = "logo"
-            src = "SVG/rounded_dark.svg"
-            height = "40px"
-            >
-            <div ref="myMenu" id="">
+          <div ref="myMenu" id = "">
+            <ul ref = "menuItems" id = "notMenuItems">
+              <li><h1>Item Number One </h1></li>
+              <li><h1>Item Number Two </h1></li>
+              <li><h1>Item Number Three </h1></li>
+              <li><h1>Item Number Four </h1></li>
+            </ul>
+          </div>
+          <div id="menu_button" v-on:mouseover = "hoverMenu = true" v-on:mouseleave = "hoverMenu = false" v-on:click = "showMenuFunction">
+            <div v-if="!showMenu">
+                <div v-if="hoverMenu" id = "hoverMenu_true">
+                <p>{{menuhover}}</p>
+              </div>
+              <div v-else-if="!hoverMenu" id = "hoverMenu_false">
+                <p>{{menu}}<p>
+              </div>
+            </div>
+            <div v-else-if="showMenu" id ="showingMenu">
+              <p>{{menuDown}}</p>
+            </div>
+          </div>
+          <img id = "logo" src = "SVG/rounded_dark.svg" height = "40px"
+                           ref = "mainLogo">
 
-            </div>
-            <div id="menu_button" v-on:mouseover = "hoverMenu = true" v-on:mouseleave = "hoverMenu = false" v-on:click = "showMenuFunction">
-              <div v-if="!showMenu">
-                  <div v-if="hoverMenu" id = "hoverMenu_true">
-                  <p>{{menuhover}}</p>
-                </div>
-                <div v-else-if="!hoverMenu" id = "hoverMenu_false">
-                  <p>{{menu}}<p>
-                </div>
-              </div>
-              <div v-else-if="showMenu" id ="showingMenu">
-                <p>{{menuDown}}</p>
-              </div>
-            </div>
-            <img id = "logo"
-              src = "SVG/rounded_dark.svg"
-              height = "40px"
-              >
         </div>
 
 
