@@ -11,10 +11,10 @@
         <div id = "header">
           <div ref="myMenu" id = "">
             <ul ref = "menuItems" id = "notMenuItems">
-              <li><h1>Item Number One </h1></li>
-              <li><h1>Item Number Two </h1></li>
+              <li><h1>Home</h1></li>
+              <li><h1>Artwork, 3d, 2d, video</h1></li>
               <li><h1>Item Number Three </h1></li>
-              <li><h1>Item Number Four </h1></li>
+              <li><h1>About me </h1></li>
             </ul>
           </div>
           <div id="menu_button" v-on:mouseover = "hoverMenu = true" v-on:mouseleave = "hoverMenu = false" v-on:click = "showMenuFunction">
@@ -30,11 +30,18 @@
               <p>{{menuDown}}</p>
             </div>
           </div>
-          <img id = "logo" src = "SVG/rounded_dark.svg" height = "40px"
+          <a href="index.html">
+            <img id = "logo" src = "SVG/rounded_dark.svg" height = "40px"
                            ref = "mainLogo">
+          </a>
 
         </div>
-        <canvas ref = "canvas" id ="canvas"></canvas>
+        <button v-on:click = "clearScreen">CLEAR CANVAS</button>
+        <button v-on:click = "createFlies">Create Flies</button>
+        <button v-on:click = "drawFlies">Draw Flies</button>
+        <canvas ref = "canvas" id ="canvas">
+
+        </canvas>
 
 
     </div>
