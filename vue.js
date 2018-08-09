@@ -130,6 +130,7 @@ new Vue({
              + this.currentFlies[i].color.alpha + ')';
         this.context.arc( this.currentFlies[i].x, this.currentFlies[i].y,
                           this.currentFlies[i].size, 0, Math.PI * 2, false );
+        console.log(this.context.arc); 
         this.context.fill();
       }
     },
