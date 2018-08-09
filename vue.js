@@ -19,7 +19,7 @@ new Vue({
     maxFlies: 15,
     flyXSpeedRange: [-1,1],
     flyYSpeedRange: [-0.5,0.5],
-    flySizeRange: [1,5],
+    flySizeRange: [1,50],
     flyLifespanRange: [75,150],
     currentFlies: [ ], //array of fly objects
 
@@ -60,7 +60,7 @@ new Vue({
           flyObject.size = this.getRandomRange(this.flySizeRange[0], this.flySizeRange[1]);
           flyObject.lifeSpan = this.getRandomRange(this.flyLifespanRange[0], this.flyLifespanRange[1]);
           flyObject.age = 0;
-          flyObject.color = {red: 255, green: 255, blue: 255, alpha: 1};
+          flyObject.color = {red: 255, green: 255, blue: 255, alpha: this.getRandomRange(0,1)};
         }
         else{
           flyObject.x = options.x;
@@ -130,18 +130,30 @@ new Vue({
              + this.currentFlies[i].color.alpha + ')';
         this.context.arc( this.currentFlies[i].x, this.currentFlies[i].y,
                           this.currentFlies[i].size, 0, Math.PI * 2, false );
-        console.log(this.context.arc); 
+        console.log(this.context.arc);
         this.context.fill();
       }
+    },
+
+    fitToScreen: function(element) {
+      element.width = window.innerWidth - 8;
+      element.height = window.innerHeight - 37;
     },
 
   },
 
   mounted: function(){
       this.canvas = this.$refs.canvas;
+      this.canvas.style.width = "100%";
+      this.canvas.style.height = "700px";
+      console.log(this.$refs);
       this.canvasWidth = this.$refs.canvas.offsetWidth;
       this.canvasHeight = this.$refs.canvas.offsetHeight;
       this.context = this.canvas.getContext("2d");
+      this.canvas.width = window.innerWidth-200;
+      this.canvas.height = window.innerHeight;
+      //fitToScreen(this.canvas);
+
   }
 
 
