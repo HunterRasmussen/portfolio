@@ -90,6 +90,7 @@ new Vue({
     },
 
     moveFlies: function() {
+        this.clearScreen();
         this.currentFlies.forEach(function(fly){
           fly.x += fly.speedX;
           fly.y += fly.speedY;
@@ -108,6 +109,7 @@ new Vue({
                 }
           }
         })
+        this.drawFlies();
     },
 
     removeFlies: function() {
