@@ -48,11 +48,14 @@ body {
 	vertical-align: middle;
 	line-height: 150px;
 	letter-spacing: 6px;
+	font-family: 'Do Hyeon', sans-serif;
+	font-style: normal;
+	font-size: 220px;
 }
 
 #hoverMenu_false{
-
 	transition: .25s;
+	font-size: 220px;
 }
 
 #hoverMenu_true{
@@ -68,27 +71,27 @@ body {
 
 #hoverMenu_true p {
 	text-shadow: 2px 2px 6px #4e4e4e;
-	font-size: 12px;
+	font-size: 18px;
 	transition: .25s;
 
 }
 
 
 #hoverMenu_false p {
-	font-size: 12px;
+	font-size: 18px;
 	transition: .25s;
 	text-orientation: upright;
 }
 
 #showingMenu p {
-	font-size: 12px;
+	font-size: 18px;
 	transition: .25s;
 	text-orientation: upright;
 }
 
 #showingMenu p:hover{
 	text-shadow: 2px 2px 6px #4e4e4e;
-	font-size: 12px;
+	font-size: 18px;
 }
 
 
@@ -241,7 +244,7 @@ body {
 
 
 
-p {
+/*p {
 	font-family: verdana;
 	font-size: 14px;
 	font-color: black;
@@ -272,4 +275,4 @@ nav li a:hover {
 .active {
 	background-color: #3779a3;
 	color: white
-}
+}*/
