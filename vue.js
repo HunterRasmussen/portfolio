@@ -104,8 +104,8 @@ new Vue({
           }
           else{
               fly.color.alpha -= 1 / (fly.lifeSpan / 2);
-               if (fly.colors.alpha < 0) { //fix opacity.
-                  fly.colors.alpha = 0;
+               if (fly.color.alpha < 0) { //fix opacity.
+                  fly.color.alpha = 0;
                 }
           }
         })
@@ -152,9 +152,8 @@ new Vue({
       this.canvasWidth = this.$refs.canvas.offsetWidth;
       this.canvasHeight = this.$refs.canvas.offsetHeight;
       this.context = this.canvas.getContext("2d");
-      this.canvas.width = window.innerWidth-200;
-      this.canvas.height = window.innerHeight;
-      //fitToScreen(this.canvas);
+      this.canvas.width = this.canvasWidth;
+      this.canvas.height = this.canvasHeight;
 
   }
 
