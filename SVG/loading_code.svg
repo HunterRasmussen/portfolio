@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 292.65 348.35">
+  <defs>
+    <style>.cls-1{fill:#7769af;}.cls-1,.cls-10,.cls-2,.cls-3,.cls-4,.cls-5,.cls-7,.cls-8,.cls-9{stroke:#231f20;}.cls-1,.cls-10,.cls-2,.cls-3,.cls-4,.cls-5,.cls-6,.cls-7,.cls-8,.cls-9{stroke-miterlimit:10;}.cls-2{fill:#a780ba;}.cls-3{fill:#3f449b;}.cls-4,.cls-6{fill:#3c2a7b;}.cls-5{fill:#b9cfeb;}.cls-6{stroke:#3c2a7b;}.cls-7{fill:#fff;}.cls-8{fill:#3b2e7c;}.cls-9{fill:#3e429b;}.cls-10{fill:#b9cfec;}
+    </style>
+  </defs>
+  <title>Loading Code</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <rect id = "Line_1" class="cls-4" x="0.69" y="0.5" width="78.44" height="23.85" rx="11.54" ry="11.54"/>
+      <rect id = "Line_2" class="cls-1" x="27.98" y="34.75" width="213.16" height="25.61" rx="11.54" ry="11.54"/>
+      <rect id = "Line_3" class="cls-1" x="27.92" y="70.23" width="223.57" height="26.73" rx="11.54" ry="11.54"/>
+      <rect id = "Line_4" class="cls-10" x="0.5" y="107" width="32.16" height="25.01" rx="11.54" ry="11.54"/>
+      <g id="Line_5" data-name = "Line 5">
+        <rect id = "dash_1" class="cls-6" x="0.69" y="142.74" width="78.44" height="25.56" rx="11.54" ry="11.54"/>
+        <rect id = "dash_2" class="cls-9" x="85.68" y="142.74" width="96.82" height="25.56" rx="11.54" ry="11.54"/>
+        <rect id = "dash_3" class="cls-5" x="189.87" y="142.74" width="47.81" height="25.56" rx="11.54" ry="11.54"/>
+        <rect id = "dash_4" class="cls-5" x="244.34" y="142.74" width="47.81" height="25.56" rx="11.54" ry="11.54"/>
+      </g>
+      <rect id = "Line_6" class="cls-2" x="0.69" y="178.87" width="95.74" height="25.19" rx="11.54" ry="11.54"/>
+      <rect id="Line_7" class="cls-8" x="0.69" y="215.18" width="54.39" height="25.56" rx="11.54" ry="11.54"/>
+      <g id="Line_8" data-name = "Line 8">
+        <rect id = "dash_1" class="cls-2" x="27.98" y="248.99" width="127.85" height="25.61" rx="11.54" ry="11.54"/>
+        <rect id = "dash_2" class="cls-3" x="159.55" y="248.99" width="83.74" height="25.61" rx="11.54" ry="11.54"/>
+      </g>
+      <rect id="Line_9" class="cls-1" x="27.98" y="287.48" width="101.97" height="25.61" rx="11.54" ry="11.54"/>
+      <g id="Line_10" data-name = "Line 10">
+        <rect id = "dash_1" class="cls-10" x="0.5" y="322.84" width="32.16" height="25.01" rx="11.54" ry="11.54"/>
+        <rect id = "dash_2" class="cls-8" x="42.34" y="322.84" width="133.72" height="25.01" rx="11.54" ry="11.54"/>
+      </g>
+    </g>
+  </g>
+</svg>

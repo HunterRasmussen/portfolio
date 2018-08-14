@@ -3,6 +3,7 @@ body {
 	margin: 0px;
 }
 
+
 #header {
 		background: linear-gradient(to right, #b5d1ff , #360082);
     height: 700px;
@@ -224,9 +225,150 @@ body {
 	}
 }
 
+@keyframes expandRight {
+  0% { opacity: 1; width: 0}
+  100% { opacity: 1; width: 1 }
+}
+
+
+@keyframes scrollLoading {
+	0%{
+		transform: translateY(initial);
+	}
+	100%{
+		transform: translateY(-105%);
+	}
+}
+
+@keyframes scrollLoading2 {
+	0%{
+		transform: translateY(105%);
+	}
+	100%{
+		transform: translateY(0px);
+	}
+}
+
+
+
 /*----------------------------------------------------------------------------*/
 /*---------------------------------END Anims----------------------------------*/
 /*----------------------------------------------------------------------------*/
+
+
+
+
+/*----------------------------------------------------------------------------*/
+/*---------------------------------LOADING_CODE_SVG---------------------------*/
+/*----------------------------------------------------------------------------*/
+
+#svg_loading_scroll{
+	padding-left: 100px;
+}
+
+.cls-1,.cls-10,.cls-2,.cls-3,.cls-4,.cls-5,.cls-6,.cls-7,.cls-8,.cls-9{ stroke:#231f20;}
+.cls-1,.cls-10,.cls-2,.cls-3,.cls-4,.cls-5,.cls-6,.cls-7,.cls-8,.cls-9{stroke-miterlimit:10;}
+.cls-1{fill:#7769af;}
+.cls-2{fill:#a780ba;}
+.cls-3{fill:#3f449b;}
+.cls-4,.cls-6{fill:#3c2a7b;}
+.cls-5{fill:#b9cfeb;}
+.cls-7{fill:#fff;}
+.cls-8{fill:#3b2e7c;}
+.cls-9{fill:#3e429b;}
+.cls-10{fill:#b9cfec;}
+
+
+rect{
+	opacity: 0;
+	animation-name: expandRight;
+	animation-duration: .4s;
+	animation-fill-mode: forwards;
+	animation-delay: 2s;
+}
+
+.group2 rect{
+	opacity: 1;
+}
+
+#line_1{
+
+}
+
+#line_2{
+	animation-delay: 2.1s;
+}
+
+#line_3{
+	animation-delay: 2.2s;
+}
+
+#line_4{
+	animation-delay: 2.3s;
+}
+
+ #l5dash_1{
+	animation-delay: 2.4s;
+}
+
+#l5dash_2 {
+	animation-delay: 2.5s;
+}
+
+#l5dash_3 {
+	animation-delay: 2.6s;
+}
+
+#l5dash_4{
+	animation-delay: 2.7s;
+}
+
+#line_6{
+	animation-delay: 2.8s;
+}
+
+#line_7{
+	animation-delay: 2.9s;
+}
+
+#l8dash_1{
+	animation-delay: 3.0s;
+}
+
+#l8dash_2{
+	animation-delay: 3.1s;
+}
+
+#line_9{
+	animation-delay: 3.2s;
+}
+
+#l10dash_1{
+	animation-delay: 3.3s;
+}
+
+#l10dash_2{
+	animation-delay: 3.4s;
+}
+
+.group1{
+	animation-name: scrollLoading;
+	animation-duration: 1.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
+	animation-delay: 3.4s;
+}
+
+.group2{
+	transform: translateY(105%);
+	animation-name: scrollLoading2;
+	animation-duration: 1.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
+	animation-delay: 3.4s;
+}
 
 
 
