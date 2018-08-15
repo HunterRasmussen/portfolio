@@ -4,6 +4,7 @@ new Vue({
 
   data: {
 
+    pageLoaded: 'false',
     menu: 'MENU |',
     menuhover: 'MENU ||',
     menuDown: 'MENU X',
@@ -154,6 +155,7 @@ new Vue({
       this.context = this.canvas.getContext("2d");
       this.canvas.width = this.canvasWidth;
       this.canvas.height = this.canvasHeight;
+      this.pageLoaded = 'true';
 
   }
 

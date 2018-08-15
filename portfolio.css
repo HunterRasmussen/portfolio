@@ -131,15 +131,13 @@ body {
 	left: 7%;
 	top: 20%;
 	line-height: 50px;
-	list-style-type: none;
-
-
-
+	list-style-type: none
 }
 
 #menuItems li{
 	animation-name: fadeInRight;
 	animation-duration: 2s;
+	font-family: 'Nunito', sans-serif;
 }
 
  li:nth-child(1){
@@ -284,11 +282,7 @@ rect{
 	animation-name: expandRight;
 	animation-duration: .4s;
 	animation-fill-mode: forwards;
-	animation-delay: 2s;
-}
-
-.group2 rect{
-	opacity: 1;
+	animation-delay: 1s;
 }
 
 #line_1{
@@ -296,59 +290,59 @@ rect{
 }
 
 #line_2{
-	animation-delay: 2.1s;
+	animation-delay: 1.1s;
 }
 
 #line_3{
-	animation-delay: 2.2s;
+	animation-delay: 1.2s;
 }
 
 #line_4{
-	animation-delay: 2.3s;
+	animation-delay: 1.3s;
 }
 
  #l5dash_1{
-	animation-delay: 2.4s;
+	animation-delay: 1.4s;
 }
 
 #l5dash_2 {
-	animation-delay: 2.5s;
+	animation-delay: 1.5s;
 }
 
 #l5dash_3 {
-	animation-delay: 2.6s;
+	animation-delay: 1.6s;
 }
 
 #l5dash_4{
-	animation-delay: 2.7s;
+	animation-delay: 1.7s;
 }
 
 #line_6{
-	animation-delay: 2.8s;
+	animation-delay: 1.8s;
 }
 
 #line_7{
-	animation-delay: 2.9s;
+	animation-delay: 1.9s;
 }
 
 #l8dash_1{
-	animation-delay: 3.0s;
+	animation-delay: 2.0s;
 }
 
 #l8dash_2{
-	animation-delay: 3.1s;
+	animation-delay: 2.1s;
 }
 
 #line_9{
-	animation-delay: 3.2s;
+	animation-delay: 2.2s;
 }
 
 #l10dash_1{
-	animation-delay: 3.3s;
+	animation-delay: 2.3s;
 }
 
 #l10dash_2{
-	animation-delay: 3.4s;
+	animation-delay: 2.4s;
 }
 
 .group1{
@@ -357,7 +351,12 @@ rect{
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 	animation-fill-mode: forwards;
-	animation-delay: 3.4s;
+	animation-delay: 2.4s;
+	/*visibility: hidden;*/
+}
+
+.group2 rect{
+	opacity: 0;
 }
 
 .group2{
@@ -367,7 +366,444 @@ rect{
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 	animation-fill-mode: forwards;
-	animation-delay: 3.4s;
+	animation-delay: 2.4s;
+}
+
+.group2 #line_1{
+	animation-name: line1;
+	animation-duration: 1.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+@keyframes line1 {
+	0%{
+		opacity: 1;
+		width: 0px;
+	}
+	3%{
+		width: 0px;
+	}
+	13%{
+		width: 78.44px;
+	}
+	98%{
+		width: 78.44px;
+	}
+	99%{
+		width: 0px;
+	}
+	100%{
+		opacity: 1;
+		width: 0px;
+	}
+}
+
+.group2 #line_2{
+	animation-name: line2;
+	animation-duration: 1.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes line2 {
+	0%{
+		width: 0px;
+		opacity: 1;
+	}
+	2%{
+		width: 0px;
+	}
+	12%{
+		width: 213.16px;
+	}
+	98%{
+		width: 213.16px;
+	}
+	99%{
+		width: 0px;
+	}
+	100%{
+		width: 0px;;
+		opacity: 1;
+	}
+}
+
+.group2 #line_3{
+	animation-name: line3;
+	animation-duration: 1.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes line3 {
+	0%{
+		opacity: 1;
+		width: 0px;
+	}
+	4%{
+		width: 0px;
+	}
+	14%{
+		width: 223.57px;
+	}
+	99%{
+		width: 223.57px;
+		opacity: 1;
+	}
+	100%{
+		width: 0px;;
+	}
+}
+
+.group2 #line_4{
+	animation-name: line4;
+	animation-duration: 1.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	opacity: 1;
+}
+
+@keyframes line4 {
+	0%{
+		width: 0px;
+	}
+	6%{
+		width: 0px;
+	}
+	16%{
+		width: 32.16px;
+	}
+	99%{
+		width: 32.16px;
+	}
+	100%{
+		width: 0px;
+	}
+}
+
+.group2 #l5dash_1{
+	animation-name: l5d1;
+	animation-duration: 1.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	opacity: 1;
+}
+
+@keyframes l5d1 {
+	0%{
+		width: 0px;
+	}
+	8%{
+		width: 0px;
+	}
+	18%{
+		width: 78.44px;
+	}
+	99%{
+		width: 78.44px;
+	}
+	100%{
+		width: 0px;
+	}
+}
+
+.group2 #l5dash_2{
+	animation-name: l5d2;
+	animation-duration: 1.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	opacity: 1;
+}
+
+@keyframes l5d2 {
+	0%{
+		width: 0px;
+	}
+	10%{
+		width: 0px;
+	}
+	20%{
+		width: 96.82px;
+	}
+	99%{
+		width: 96.82px;
+	}
+	100%{
+		width: 0px;
+	}
+}
+
+.group2 #l5dash_3{
+	animation-name: l5d3;
+	animation-duration: 1.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	opacity: 1;
+}
+
+@keyframes l5d3 {
+	0%{
+		width: 0px;
+	}
+	11%{
+		width: 0px;
+	}
+	21%{
+		width: 47.81px;
+	}
+	80%{
+		width: 47.81px;
+	}
+	81%{
+		width: 0px;
+	}
+	100%{
+		width: 0px;
+	}
+}
+
+.group2 #l5dash_4{
+	animation-name: l5d4;
+	animation-duration: 1.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	opacity: 1;
+}
+
+@keyframes l5d4 {
+	0%{
+		width: 0px;
+	}
+	12%{
+		width: 0px;
+	}
+	22%{
+		width: 47.81px;
+	}
+	80%{
+		width: 47.81px;
+	}
+	81%{
+		width: 0px;
+	}
+	100%{
+		width: 0px;
+	}
+}
+
+.group2 #line_6{
+	animation: line6 1.5s linear infinite;
+	-moz-animation: line6 1.5s linear infinite;
+	opacity: 1;
+}
+
+@keyframes line6 {
+	0%{
+		width: 0px;
+	}
+
+	18%{
+		width: 0px;
+	}
+	28%{
+		width: 95.74px;
+	}
+	60%{
+		width: 95.74px;
+	}
+	61%{
+		width: 0px;
+	}
+	100%{
+		width: 0px;
+	}
+}
+
+@-moz-keyframes line6 {
+	0%{
+		width: 0px;
+	}
+
+	14%{
+		width: 0px;
+	}
+	24%{
+		width: 95.74px;
+	}
+	50%{
+		width: 95.74px;
+	}
+	51%{
+		width: 0px;
+	}
+	100%{
+		width: 0px;
+	}
+}
+
+.group2 #line_7{
+	animation-name: line7;
+	animation-duration: 1.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	opacity: 1;
+}
+
+@keyframes line7 {
+	0%{
+		width: 0px;
+	}
+	14%{
+		width: 0px;
+	}
+	24%{
+		width: 54.39px;
+	}
+	90%{
+		width: 54.39px;
+	}
+	91%{
+		width: 0px;
+	}
+	100%{
+		width: 0px;
+	}
+}
+
+.group2 #l8dash_1{
+	animation-name: l8d1;
+	animation-duration: 1.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	opacity: 1;
+}
+
+@keyframes l8d1 {
+	0%{
+		width: 0px;
+	}
+	10%{
+		width: 0px;
+	}
+	20%{
+		width: 127.85px;
+	}
+	90%{
+		width: 127.85px;
+	}
+	91%{
+		width: 0px;
+	}
+	100%{
+		width: 0px;
+	}
+}
+
+.group2 #l8dash_2{
+	animation-name: l8d2;
+	animation-duration: 1.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	opacity: 1;
+}
+
+@keyframes l8d2 {
+	0%{
+		width: 0px;
+	}
+	10%{
+		width: 0px;
+	}
+	20%{
+		width: 83.74px;
+	}
+	90%{
+		width: 83.74px;
+	}
+	91%{
+		width: 0px;
+	}
+	100%{
+		width: 0px;
+	}
+}
+
+.group2 #line_9{
+	animation-name: line9;
+	animation-duration: 1.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	opacity: 1;
+}
+
+@keyframes line9 {
+	0%{
+		width: 0px;
+	}
+	2%{
+		width: 0px;
+	}
+	12%{
+		width: 101.97px;
+	}
+	20%{
+		width: 101.97px;
+	}
+	21%{
+		width: 0;
+	}
+	99%{
+
+	}
+	100%{
+		width: 0px;
+	}
+}
+
+.group2 #l10dash_1{
+	animation-name: l10d1;
+	animation-duration: 1.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	opacity: 1;
+}
+
+@keyframes l10d1 {
+	0%{
+		width: 0px;
+	}
+	8%{
+		width: 83.74px;
+	}
+	21%{
+		width: 0px;
+	}
+	100%{
+		width: 0px;
+	}
+}
+
+.group2 #l10dash_2{
+	animation-name: l10d2;
+	animation-duration: 1.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	opacity: 1;
+}
+
+@keyframes l10d2 {
+	0%{
+		width: 0px;
+	}
+	8%{
+		width: 83.74px;
+	}
+	21%{
+		width: 0px;
+	}
+	100%{
+		width: 0px;
+	}
 }
 
 
@@ -383,7 +819,24 @@ rect{
 	height: 700px;
 }
 
+#rectTest{
+	animation: rectTestAnim 3s linear infinite;
+	opacity: 1;
+	background-color: red;
+	fill:{black}
+}
 
+@keyframes rectTestAnim {
+	0%{
+		width: 1px;
+	}
+	50%{
+		width: 200px;
+	}
+	100%{
+		width: 1px;
+	}
+}
 
 /*p {
 	font-family: verdana;

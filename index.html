@@ -9,7 +9,7 @@
 
 <body>
     <div id="root" >
-        <div id = "header">
+        <div v-if="pageLoaded" id = "header">
           <div ref="myMenu" id = "">
             <ul ref = "menuItems" id = "notMenuItems">
               <li><h1>Home</h1></li>
@@ -36,7 +36,7 @@
                            ref = "mainLogo">
           </a>
         </div>
-        <svg id = "svg_loading_scroll" height = "500px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 292.65 348.35">
+       <svg id = "svg_loading_scroll" height = "500px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 292.65 348.35">
           <title>Loading Code</title>
           <g class = "group1">
             <rect id = "line_1" class="cls-4" x="0.69" y="0.5" width="78.44" height="23.85" rx="11.54" ry="11.54"/>
@@ -88,8 +88,12 @@
 
 
         </svg>
-
-
+        <br/><br/><br/>
+        <svg height = "500px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 292.65 348.35">
+          <g id = "rectTest">
+            <rect  x="42.34" y="322.84" width="133.72" height="25.01" />
+          </g>
+        </svg>
 
     </div>
 
