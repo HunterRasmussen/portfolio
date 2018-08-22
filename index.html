@@ -36,7 +36,7 @@
                            ref = "mainLogo">
           </a>
         </div>
-       <svg id = "svg_loading_scroll" height = "500px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 292.65 348.35">
+       <!--<svg id = "svg_loading_scroll" height = "500px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 292.65 348.35">
           <title>Loading Code</title>
           <g class = "group1">
             <rect id = "line_1" class="cls-4" x="0.69" y="0.5" width="78.44" height="23.85" rx="11.54" ry="11.54"/>
@@ -85,27 +85,17 @@
               <rect id = "l10dash_2" class="cls-8" x="42.34" y="322.84" width="133.72" height="25.01" rx="11.54" ry="11.54"/>
             </g>
           </g>
+        </svg>-->
+      <button v-on:click = "startFlies">Start Flies</button>
+      <button v-on:click = "stopFlies">Stop Flies</button>
+      <canvas ref = "canvas" id ="canvas">
 
-
-        </svg>
-        <br/><br/><br/>
-        <svg height = "500px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 292.65 348.35">
-          <g id = "rectTest">
-            <rect  x="42.34" y="322.84" width="133.72" height="25.01" />
-          </g>
-        </svg>
-
+      </canvas>
     </div>
 
       <!--
 
-      <button v-on:click = "clearScreen">CLEAR CANVAS</button>
-      <button v-on:click = "createFlies">Create Flies</button>
-      <button v-on:click = "drawFlies">Draw Flies</button>
-      <button v-on:click = "moveFlies">Move Flies</button>
-      <canvas ref = "canvas" id ="canvas">
-
-      </canvas>
+      
 
        <div class = "column2">
             <h1>Hunter Rasmussen</h1>
