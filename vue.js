@@ -17,11 +17,11 @@ new Vue({
     canvas: '',
     canvasWidth: '',
     canvasHeight: '',
-    maxFlies: 15,
-    flyXSpeedRange: [-1,1],
-    flyYSpeedRange: [-0.5,0.5],
-    flySizeRange: [1,50],
-    flyLifespanRange: [75,150],
+    maxFlies: 20,
+    flyXSpeedRange: [0,.5],
+    flyYSpeedRange: [-0.25,0.25],
+    flySizeRange: [5,60],
+    flyLifespanRange: [75,450],
     currentFlies: [ ], //array of fly objects
     timer: '',
 
@@ -62,7 +62,7 @@ new Vue({
           flyObject.size = this.getRandomRange(this.flySizeRange[0], this.flySizeRange[1]);
           flyObject.lifeSpan = this.getRandomRange(this.flyLifespanRange[0], this.flyLifespanRange[1]);
           flyObject.age = 0;
-          flyObject.color = {red: 255, green: 255, blue: 255, alpha: this.getRandomRange(0,1)};
+          flyObject.color = {red: 255, green: 255, blue: 255, alpha: 0};
         }
         else{
           flyObject.x = options.x;
@@ -86,7 +86,8 @@ new Vue({
 
     clearScreen: function() {
       this.context.beginPath();
-      this.context.fillStyle = 'rgb(1, 1, 1)';
+      this.context.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
+      this.context.fillStyle = 'rgba(255, 255, 255, .0)';
       this.context.rect(0, 0, this.canvasWidth, this.canvasHeight);
       this.context.fill();
     },
@@ -146,7 +147,7 @@ new Vue({
     },
 
     startFlies: function(){
-      this.timer = setInterval(this.renderFliesAnimation, 50);
+      this.timer = setInterval(this.renderFliesAnimation, 40);
     },
 
     stopFlies: function(){
@@ -170,6 +171,7 @@ new Vue({
       this.context = this.canvas.getContext("2d");
       this.canvas.width = this.canvasWidth;
       this.canvas.height = this.canvasHeight;
+      this.startFlies();
       this.pageLoaded = 'true';
 
   },

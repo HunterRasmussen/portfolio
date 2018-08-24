@@ -9,6 +9,9 @@
 
 <body>
     <div id="root" >
+      <canvas ref = "canvas" id ="canvas">
+
+      </canvas>
         <div v-if="pageLoaded" id = "header">
           <div ref="myMenu" id = "">
             <ul ref = "menuItems" id = "notMenuItems">
@@ -26,10 +29,14 @@
               <div v-else-if="!hoverMenu" id = "hoverMenu_false">
                 <p>{{menu}}<p>
               </div>
+
             </div>
             <div v-else-if="showMenu" id ="showingMenu">
               <p>{{menuDown}}</p>
             </div>
+          </div>
+          <div>
+              <h1 id = "myName">Hunter Rasmussen</h1>
           </div>
           <a href="index.html">
             <img id = "logo" src = "SVG/rounded_dark.svg" height = "40px"
@@ -86,16 +93,11 @@
             </g>
           </g>
         </svg>-->
-      <button v-on:click = "startFlies">Start Flies</button>
-      <button v-on:click = "stopFlies">Stop Flies</button>
-      <canvas ref = "canvas" id ="canvas">
-
-      </canvas>
     </div>
 
       <!--
 
-      
+
 
        <div class = "column2">
             <h1>Hunter Rasmussen</h1>
