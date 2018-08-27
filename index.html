@@ -21,22 +21,22 @@
               <li><h1>About me </h1></li>
             </ul>
           </div>
+          <div v-ir = "!showMenu">
+             <h1 id = "myName">Hunter Rasmussen</h1>
+          </div>
           <div id="menu_button" v-on:mouseover = "hoverMenu = true" v-on:mouseleave = "hoverMenu = false" v-on:click = "showMenuFunction">
             <div v-if="!showMenu">
-                <div v-if="hoverMenu" id = "hoverMenu_true">
+              
+              <div v-if="hoverMenu" id = "hoverMenu_true">
                 <p>{{menuhover}}</p>
               </div>
               <div v-else-if="!hoverMenu" id = "hoverMenu_false">
                 <p>{{menu}}<p>
               </div>
-
             </div>
             <div v-else-if="showMenu" id ="showingMenu">
               <p>{{menuDown}}</p>
             </div>
-          </div>
-          <div>
-              <h1 id = "myName">Hunter Rasmussen</h1>
           </div>
           <a href="index.html">
             <img id = "logo" src = "SVG/rounded_dark.svg" height = "40px"
