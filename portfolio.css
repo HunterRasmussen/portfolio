@@ -87,6 +87,7 @@ body {
 	letter-spacing: 6px;
 	font-family: 'Nunito', sans-serif;
 	font-style: normal;
+	cursor: pointer;
 }
 
 #hoverMenu_false{
@@ -174,6 +175,7 @@ body {
 	animation-name: fadeInRight;
 	animation-duration: 2s;
 	font-family: 'Nunito', sans-serif;
+	cursor: pointer;
 }
 
  li:nth-child(1){
