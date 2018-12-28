@@ -11,6 +11,7 @@ new Vue({
     menuShow: false,
     hoverMenu: false,
     showMenu: false,
+    artworkListItemHover: false,
 
     //firefly stuff
     context: '',
@@ -38,11 +39,13 @@ new Vue({
         this.$refs.myMenu.id = "menuHidden";
         this.$refs.mainLogo.id = "logo";
         this.$refs.menuItems.id = "notMenuItems";
+        this.$refs.myName.id = "myName";
       }
       else{
         this.$refs.myMenu.id = "menuDropDown";
         this.$refs.mainLogo.id = "logoWithMenu";
         this.$refs.menuItems.id = "menuItems";
+        this.$refs.myName.id = "myNameWithMenu";
       }
 
       console.log(this.$refs);
