@@ -351,14 +351,50 @@ body {
 	}
 }
 
+.parallax {
+  /* The image used */
+  background-image: url("img_parallax.jpg");
+
+  /* Set a specific height */
+  height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 #mastImage{
+	background-image: url("images/hunter1.png");
+	height: 1000px;
+	  /* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
 	max-width: 65%;
 	float: right;
-	padding-left: 50px;
-	transform: scaleX(-1);
-	filter: drop-shadow(-10px 5px 8px #000000);
-
-
+	margin-top: -205px;
+	padding-left: 0px;
+	filter: drop-shadow(10px 7px 8px #000000);
+	/* animation-name: bobDown; */
+	animation-duration: 5s;
+	animation-fill-mode: both;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+@keyframes bobDown {
+	0%{
+		transform: translateY(0px);
+	}
+	50%{
+		transform: translateY(20px);
+	}
+	100%{
+		transform: translateY(0px);
+	}
 }
 
 /*----------------------------------------------------------------------------*/
