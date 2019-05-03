@@ -15,14 +15,57 @@
         <div v-if="pageLoaded" id = "header">
           <div ref="myMenu" id = "">
             <ul ref = "menuItems" id = "notMenuItems">
-              <li><h1>Home</h1></li>
-              <li><h1>Artwork, 3d, 2d, video</h1></li>
-              <li><h1>Item Number Three </h1></li>
-              <li><h1>About me </h1></li>
+                <li>
+                  <div id = "menuItem1">
+                   <!-- v-on:mouseover = "menuItem1Hover = true" v-onmouseleave = "menuItem1Hover = false"> -->
+                    <a href="index.html">
+                     <h1>Home</h1>
+                    </a>
+                  </div>
+                </li>
+
+                <li>
+                  <div id = "artworkListItem" ref = "artworkListItem"
+                   v-on:mouseover = "artworkListItemHover = true" v-on:mouseleave = "artworkListItemHover = false">
+                      <div v-if="!artworkListItemHover" id = "artworkItem">
+                        <h1>Artwork-></h1>
+                      </div>
+                      <div v-else-if="artworkListItemHover" id="artworkItemHover">
+                        <h1>
+                          <div id= "ArtworkTag">
+                            Artwork:
+                          </div>
+                          <div id = "ThreeDLink">
+                            <a href = "index.html">3D,</a>
+                          </div>
+                          <div id = "TwoDLink">
+                            <a href = "index.html">2D,</a>
+                          </div>
+                          <div id = "VideoLink">
+                            <a href = "index.html">Video</a>
+                          </div>
+                        </h1>
+                      </div>
+                  </div>
+                </li>
+                <li>
+                  <div id = "menuItem3">
+                    <a href = "index.html">
+                      <h1>Item Number Three </h1>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div id = "menuItem4">
+                    <a href = "about.html">
+                      <h1>About me </h1>
+                    </a>
+                  </div>
+                </li>
             </ul>
           </div>
-          <div v-if = "!showMenu" id = "nameHolder">
-             <h1 id = "myName">Hunter Rasmussen</h1>
+          <div id = "nameHolder">
+             <h1 id = "myName" ref = myName>Hunter Rasmussen</h1>
           </div>
           <div id="menu_button" v-on:mouseover = "hoverMenu = true" v-on:mouseleave = "hoverMenu = false" v-on:click = "showMenuFunction">
             <div v-if="!showMenu">
@@ -43,6 +86,8 @@
                            ref = "mainLogo">
           </a>
         </div>
+        <img src = "images/hunter1.png" id = "mastImage"></img>
+
        <!--<svg id = "svg_loading_scroll" height = "500px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 292.65 348.35">
           <title>Loading Code</title>
           <g class = "group1">

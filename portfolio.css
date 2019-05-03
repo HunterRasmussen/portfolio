@@ -18,23 +18,85 @@ body {
 	min-width: 100%;
 }
 
+/*----------------------------MY NAME--------------------------
+--------------------------------------------------------------
+---------------------------------------------------------------*/
 #myName {
-	color: #686868;
+	color: #1e1e1e;
 	max-width: 100%;
 	max-height: 450px;
 	position: absolute;
-	padding-left: 20%;
-	padding-top: 18%;
+	padding-left: 10%;
+	padding-top: 20%;
 	margin: 0px;
 	font-family: 'Nunito', sans-serif;
-	font-style: normal;
-	font-size: 50px;
+	font-style: bold;
+	font-size: 45px;
 	text-align: center;
 	font-weight: normal;
 	text-transform: uppercase;
 	letter-spacing: 0.0000em;
-
+	cursor: default;
+	/* filter: drop-shadow(7px -3px 4px #000000); */
+	animation-name: showMyName;
+	animation-duration: 1.0s;
+	animation-delay: 0.0s;
+	animation-fill-mode: forwards;
+	cubic-bezier(.215,.61,.355,1)
 }
+@keyframes showMyName {
+	0%{
+		transform: translateY(-80%);
+		opacity: 0;
+	}
+	50%{
+		transform: translateY(-10%);
+		opacity: 0;
+	}
+	100%{
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+#myNameWithMenu{
+	color: #1e1e1e;
+	max-width: 100%;
+	max-height: 0px;
+	position: absolute;
+	padding-left: 10%;
+	padding-top: 20%;
+	margin: 0px;
+	font-family: 'Nunito', sans-serif;
+	font-style: bold;
+	font-size: 45px;
+	text-align: center;
+	font-weight: normal;
+	text-transform: uppercase;
+	letter-spacing: 0.0000em;
+	/* filter: drop-shadow(4px -3px 10px #000000); */
+	opacity: 0;
+	animation-name: hideMyName;
+	animation-duration: 1.0s;
+	animation-delay: 0.0s;
+	animation-fill-mode: forwards;
+	cubic-bezier(.215,.61,.355,1)
+}
+@keyframes hideMyName {
+	0%{
+		transform: translateY(0px);
+		opacity: 1;
+	}
+	50%{
+		transform: translateY(-10%);
+		opacity: 0;
+	}
+	100%{
+		transform: translateY(-80%);
+		opacity: 0;
+	}
+}
+
+
 
 #canvas{
 	/*background-color: black;*/
@@ -87,6 +149,7 @@ body {
 	letter-spacing: 6px;
 	font-family: 'Nunito', sans-serif;
 	font-style: normal;
+	cursor: pointer;
 }
 
 #hoverMenu_false{
@@ -166,17 +229,92 @@ body {
 	position: absolute;
 	left: 7%;
 	top: 20%;
+	min-width: 35%
 	line-height: 50px;
-	list-style-type: none
+	list-style-type: none;
 }
 
 #menuItems li{
+	/* min-width: 50%;
+	min-height: 10%; */
 	animation-name: fadeInRight;
 	animation-duration: 2s;
+	animation-fill-mode: forwards;
 	font-family: 'Nunito', sans-serif;
+
+
 }
 
- li:nth-child(1){
+#menuItems a{
+	text-decoration: none;
+	color: inherit;
+	transition:  .5s;
+}
+
+#menuItem1 :hover{
+	/* transform: translateX(10%); */
+	filter: drop-shadow(30px 10px 4px #6e51ff);
+	cursor: pointer;
+	transition: .5s;
+}
+
+#ArtworkTag{
+	filter: drop-shadow(30px 10px 4px #6e51ff);
+	transition: .5s;
+	cursor: default;
+}
+#ThreeDLink{
+	/* float:left; */
+	position: absolute;
+	top: 1px;
+	left: 140px;
+	padding-left: 20px;
+	filter: none;
+	transition: .5s;
+}
+#ThreeDLink :hover{
+	filter: drop-shadow(30px 10px 4px #6e51ff);
+	transition: .5s;
+}
+
+#TwoDLink{
+	/* float:left; */
+	position: absolute;
+	top: 1px;
+	left: 205px;
+	padding-left: 15px;
+	transition: .5s;
+}
+#TwoDLink :hover{
+	filter: drop-shadow(30px 10px 4px #6e51ff);
+	transition: .5s;
+}
+
+#VideoLink{
+	/* float: left; */
+	position: absolute;
+	top: 1px;
+	left: 260px;
+	padding-left: 15px;
+	transition: .5s;
+}
+#VideoLink :hover{
+	filter: drop-shadow(30px 10px 4px #6e51ff);
+	transition: .5s;
+}
+
+#menuItem3 :hover{
+	filter: drop-shadow(30px 10px 4px #6e51ff);
+	transition: .5s;
+	cursor: pointer;
+}
+#menuItem4 :hover{
+	filter: drop-shadow(30px 10px 4px #6e51ff);
+	transition: .5s;
+	cursor: pointer;
+}
+
+#menuItems li:nth-child(1){
 	opacity: 0;
 	animation-delay: 0.6s;
 	animation-fill-mode: forwards;
@@ -197,6 +335,66 @@ body {
 	opacity: 0;
 	animation-delay: 1.15s;
 	animation-fill-mode: forwards;
+}
+#artworkItemHover h1{
+	color:inherit;
+	animation-name: fadeIn;
+	animation-duration: .5s;
+	animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("img_parallax.jpg");
+
+  /* Set a specific height */
+  height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#mastImage{
+	background-image: url("images/hunter1.png");
+	height: 1000px;
+	  /* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	max-width: 65%;
+	float: right;
+	margin-top: -205px;
+	padding-left: 0px;
+	filter: drop-shadow(10px 7px 8px #000000);
+	/* animation-name: bobDown; */
+	animation-duration: 5s;
+	animation-fill-mode: both;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+@keyframes bobDown {
+	0%{
+		transform: translateY(0px);
+	}
+	50%{
+		transform: translateY(20px);
+	}
+	100%{
+		transform: translateY(0px);
+	}
 }
 
 /*----------------------------------------------------------------------------*/
