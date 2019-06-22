@@ -8,6 +8,13 @@ new Vue({
     menu: 'MENU |',
     menuhover: 'MENU ||',
     menuDown: 'MENU X',
+    curSpinnerIndex: 0,
+    nameSpinnerOptions: ['HUNT', 'LEARN', 'COD', 'VIDEOGRAPH', 'PHILOSOPH'],
+    nameSpinnerDescriptions: ["My name is Hunter Rasmussen.", "My brother in law once said to me \"You are interested in everything.\"",
+                               "I like the problem solving that occurs when coding", "I love the art of storytelling through movies.",
+                               "I love the critical thinking and open mind that studying philosophy engenders."],
+    nameDescriptionHover: false,
+    spinnerHolder: '',
     menuShow: false,
     hoverMenu: false,
     showMenu: false,
@@ -48,9 +55,77 @@ new Vue({
         this.$refs.myName.id = "myNameWithMenu";
       }
 
-      console.log(this.$refs);
+      // console.log(this.$refs);
 
     },
+
+    sleep: function(milliseconds) {
+      var start = new Date().getTime();
+      for (var i = 0; i < 1e7; i++) {
+        if ((new Date().getTime() - start) > milliseconds){
+          break;
+        }
+      }
+    },
+
+    nameSpin: function(){
+      anime.timeline({loop: false})
+      .add({
+        targets: '#nameSpinner .spanNameLetter',
+        translateY: [0,-100],
+        opacity: [1,0],
+        // easing: "easeInExpo",
+        duration: 1000,
+        delay: function(el, i) {
+          return 0 + 30 * i;
+        }
+      });
+      console.log("Here");
+      setTimeout(this.nameSpinCont, 500);
+    },
+
+    nameSpinCont: function(){
+      console.log("There");
+      this.curSpinnerIndex += 1;
+      if(this.curSpinnerIndex >= this.nameSpinnerOptions.length){
+        this.curSpinnerIndex = 0;
+      }
+      this.$refs.spinnerRef.innerText = this.nameSpinnerOptions[this.curSpinnerIndex];
+      this.$refs.spinnerRef.innerHTML = this.nameSpinnerOptions[this.curSpinnerIndex];
+      console.log(this.curSpinnerIndex);
+      this.createNameSpinnerSpan();
+      anime.timeline({loop: false})
+        .add({
+          targets: '#nameSpinner .spanNameLetter',
+          translateY: [100,0],
+          translateZ: 0,
+          opacity: [0,1],
+          easing: "easeOutExpo",
+          duration: 1400,
+          delay: function(el, i) {
+            return 0 + 30 * i;
+          }
+        });
+    },
+
+    createNameSpinnerSpan: function() {
+      this.spinnerHolder = this.$refs.spinnerRef;
+      var text = this.spinnerHolder.innerText;
+      console.log(this.spinnerHolder.innerHTML);
+      newHTMLArray = [];
+      for(let i = 0; i < text.length; i++){
+        var toAdd = "<span class='spanNameLetter'>" + text[i] + "</span>";
+        newHTMLArray.push(toAdd);
+      }
+      toReturn = newHTMLArray.join("");
+      this.spinnerHolder.innerHTML = toReturn;
+      console.log(toReturn);
+      console.log(this.spinnerHolder);
+    },
+
+  
+
+
 
     getRandomRange: function(min,max){
         return Math.random() * (max - min) + min;
@@ -129,14 +204,14 @@ new Vue({
     drawFlies: function() {
       for(i = 0; i < this.currentFlies.length; i++){
         this.context.beginPath();
-        console.log(this.currentFlies[i]);
+        // console.log(this.currentFlies[i]);
         this.context.fillStyle = 'rgba(' + this.currentFlies[i].color.red + ', '
             + this.currentFlies[i].color.green + ', '
             + this.currentFlies[i].color.blue + ', '
              + this.currentFlies[i].color.alpha + ')';
         this.context.arc( this.currentFlies[i].x, this.currentFlies[i].y,
                           this.currentFlies[i].size, 0, Math.PI * 2, false );
-        console.log(this.context.arc);
+        // console.log(this.context.arc);
         this.context.fill();
       }
     },
@@ -175,6 +250,7 @@ new Vue({
       this.canvas.width = this.canvasWidth;
       this.canvas.height = this.canvasHeight;
       this.startFlies();
+      this.createNameSpinnerSpan();
       this.pageLoaded = 'true';
 
   },

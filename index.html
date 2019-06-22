@@ -86,97 +86,33 @@
                            ref = "mainLogo">
           </a>
         </div>
-        <img src = "images/hunter1.png" id = "mastImage"></img>
+        <div id = mastImageContainer>
+           <img id = "mastImage" src = "images/hunter1.png" ></img>
+        </div>
 
-       <!--<svg id = "svg_loading_scroll" height = "500px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 292.65 348.35">
-          <title>Loading Code</title>
-          <g class = "group1">
-            <rect id = "line_1" class="cls-4" x="0.69" y="0.5" width="78.44" height="23.85" rx="11.54" ry="11.54"/>
-            <rect id = "line_2" class="cls-1" x="27.98" y="34.75" width="213.16" height="25.61" rx="11.54" ry="11.54"/>
-            <rect id = "line_3" class="cls-1" x="27.92" y="70.23" width="223.57" height="26.73" rx="11.54" ry="11.54"/>
-            <rect id = "line_4" class="cls-10" x="0.5" y="107" width="32.16" height="25.01" rx="11.54" ry="11.54"/>
-            <g id = "line_5" data-name = "Line 5">
-              <rect id = "l5dash_1" class="cls-6" x="0.69" y="142.74" width="78.44" height="25.56" rx="11.54" ry="11.54"/>
-              <rect id = "l5dash_2" class="cls-9" x="85.68" y="142.74" width="96.82" height="25.56" rx="11.54" ry="11.54"/>
-              <rect id = "l5dash_3" class="cls-5" x="189.87" y="142.74" width="47.81" height="25.56" rx="11.54" ry="11.54"/>
-              <rect id = "l5dash_4" class="cls-5" x="244.34" y="142.74" width="47.81" height="25.56" rx="11.54" ry="11.54"/>
-            </g>
-            <rect id = "line_6" class="cls-2" x="0.69" y="178.87" width="95.74" height="25.19" rx="11.54" ry="11.54"/>
-            <rect id = "line_7" class="cls-8" x="0.69" y="215.18" width="54.39" height="25.56" rx="11.54" ry="11.54"/>
-            <g id = "line_8" data-name = "Line 8">
-              <rect id = "l8dash_1" class="cls-2" x="27.98" y="248.99" width="127.85" height="25.61" rx="11.54" ry="11.54"/>
-              <rect id = "l8dash_2" class="cls-3" x="159.55" y="248.99" width="83.74" height="25.61" rx="11.54" ry="11.54"/>
-            </g>
-            <rect id = "line_9" class="cls-1" x="27.98" y="287.48" width="101.97" height="25.61" rx="11.54" ry="11.54"/>
-            <g id = "line_10" data-name = "Line 10">
-              <rect id = "l10dash_1" class="cls-10" x="0.5" y="322.84" width="32.16" height="25.01" rx="11.54" ry="11.54"/>
-              <rect id = "l10dash_2" class="cls-8" x="42.34" y="322.84" width="133.72" height="25.01" rx="11.54" ry="11.54"/>
-            </g>
-          </g>
+        <div id = "nameToggle">
+          <div id = "spinnerHolder" v-on:mouseover = "nameDescriptionHover = true" 
+          v-on:mouseleave = "nameDescriptionHover = false">
+            
+            <!-- <transition name="spinnerFade"> -->
+              <h1 ref = "spinnerRef" id = "nameSpinner"  
+                v-on:click = "nameSpin" 
+                >
+                {{nameSpinnerOptions[curSpinnerIndex]}}
+              </h1>
+            <!-- </transition> -->
+            <h1 id = "nameSuffix">ER</h1>
+            <p v-if="nameDescriptionHover">{{nameSpinnerDescriptions[curSpinnerIndex]}}</p>
+          </div>
+        </div>
 
-          <g class = "group2">
-            <rect id = "line_1" class="cls-4" x="0.69" y="0.5" width="78.44" height="23.85" rx="11.54" ry="11.54"/>
-            <rect id = "line_2" class="cls-1" x="27.98" y="34.75" width="213.16" height="25.61" rx="11.54" ry="11.54"/>
-            <rect id = "line_3" class="cls-1" x="27.92" y="70.23" width="223.57" height="26.73" rx="11.54" ry="11.54"/>
-            <rect id = "line_4" class="cls-10" x="0.5" y="107" width="32.16" height="25.01" rx="11.54" ry="11.54"/>
-            <g id = "line_5" data-name = "Line 5">
-              <rect id = "l5dash_1" class="cls-6" x="0.69" y="142.74" width="78.44" height="25.56" rx="11.54" ry="11.54"/>
-              <rect id = "l5dash_2" class="cls-9" x="85.68" y="142.74" width="96.82" height="25.56" rx="11.54" ry="11.54"/>
-              <rect id = "l5dash_3" class="cls-5" x="189.87" y="142.74" width="47.81" height="25.56" rx="11.54" ry="11.54"/>
-              <rect id = "l5dash_4" class="cls-5" x="244.34" y="142.74" width="47.81" height="25.56" rx="11.54" ry="11.54"/>
-            </g>
-            <rect id = "line_6" class="cls-2" x="0.69" y="178.87" width="95.74" height="25.19" rx="11.54" ry="11.54"/>
-            <rect id = "line_7" class="cls-8" x="0.69" y="215.18" width="54.39" height="25.56" rx="11.54" ry="11.54"/>
-            <g id = "line_8" data-name = "Line 8">
-              <rect id = "l8dash_1" class="cls-2" x="27.98" y="248.99" width="127.85" height="25.61" rx="11.54" ry="11.54"/>
-              <rect id = "l8dash_2" class="cls-3" x="159.55" y="248.99" width="83.74" height="25.61" rx="11.54" ry="11.54"/>
-            </g>
-            <rect id = "line_9" class="cls-1" x="27.98" y="287.48" width="101.97" height="25.61" rx="11.54" ry="11.54"/>
-            <g id = "line_10" data-name = "Line 10">
-              <rect id = "l10dash_1" class="cls-10" x="0.5" y="322.84" width="32.16" height="25.01" rx="11.54" ry="11.54"/>
-              <rect id = "l10dash_2" class="cls-8" x="42.34" y="322.84" width="133.72" height="25.01" rx="11.54" ry="11.54"/>
-            </g>
-          </g>
-        </svg>-->
+        <div id = "homePageAboutMeContainer">
+          <h1>aboutme</h1>
+        </div>
     </div>
 
-      <!--
-
-
-
-       <div class = "column2">
-            <h1>Hunter Rasmussen</h1>
-            <img src = "prof_pic.jpg" height="200" width = "200">
-            <h2>About me </h2>
-            <hr>
-            <p> I grew up in California.  I was an avid film maker in high school and won numerous awards at film festivals. I'm currently aspiring to be a technial artist and I love creating and learning.
-             </p>
-
-
-
-             <img id = "logo"
-               src = "SVG/HR_logo_dark.svg"
-               height = "87px"
-               >
-
-             <img src="hrLogo.png" alt = "logo" id = "logo"></img>
-
-
-
-             <nav id= "menu">
-                 <ul>
-                     <li class="active"><a href = "index.html">Home</a></li>
-                     <li><a href="projects.html">Projects</a></li>
-                     <li><a href= "experience.html">Work Experience </a></li>
-                     <li><a href = "contact.html">Contact Me </a></li>
-                 </ul>
-             </nav>
-
-
-<<<<<<< HEAD
- </div>-->
-
  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
  <script src="vue.js"></script>
 </body>
 

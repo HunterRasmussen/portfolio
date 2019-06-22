@@ -27,7 +27,7 @@ body {
 	max-height: 450px;
 	position: absolute;
 	padding-left: 10%;
-	padding-top: 20%;
+	padding-top: 18%;
 	margin: 0px;
 	font-family: 'Nunito', sans-serif;
 	font-style: bold;
@@ -365,36 +365,110 @@ body {
   background-size: cover;
 }
 
-#mastImage{
-	background-image: url("images/hunter1.png");
-	height: 1000px;
+#mastImageContainer{
+	width: 30%;
+	float: right;
+}
+
+#mastImage{ 
+	/*background-image: url("images/hunter1.png");*/
+	/* height: 750px; */
 	  /* Create the parallax scrolling effect */
-	background-attachment: fixed;
+	/* background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: cover; */
 
-	max-width: 65%;
+	/* max-width: 65%; */
+	
+	height: 450px; 
+	width: auto;
 	float: right;
-	margin-top: -205px;
-	padding-left: 0px;
+	margin-top: -110%;
+	padding-right: 20%;
 	filter: drop-shadow(10px 7px 8px #000000);
-	/* animation-name: bobDown; */
-	animation-duration: 5s;
-	animation-fill-mode: both;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
+	animation-name: showMyName;
+	animation-duration: 1.0s;
+	animation-delay: 0.0s;
+	animation-fill-mode: forwards;
+	cubic-bezier(.215,.61,.355,1)
 }
 @keyframes bobDown {
 	0%{
 		transform: translateY(0px);
 	}
 	50%{
-		transform: translateY(20px);
+		transform: translateY(10px);
 	}
 	100%{
 		transform: translateY(0px);
 	}
+}
+
+#nameToggle{
+	height: 50%;
+	width: 100%;
+}
+
+#spinnerHolder{
+	margin-top: 10%;
+	margin-left: 50%;
+}
+
+#nameSpinner{
+	display: inline;
+	cursor: pointer;
+	text-align: center;
+}
+#nameSuffix{
+	text-align: center
+	display: inline;
+	
+}
+
+
+.spanNameLetter{
+	/* animation-name: showSpinnerName; */
+	animation-duration: 1.0s;
+	animation-delay: 0.0s;
+	animation-fill-mode: both;
+	cubic-bezier(.215,.61,.355,1)
+	display: inline-block;
+}
+
+@keyframes showSpinnerName {
+	0%{
+		transform: translateY(-80%);
+		opacity: 0;
+	}
+	5%{
+		transform: translateY(-10%);
+		opacity: 0;
+	}
+	100%{
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+.spinnerFade-enter-active, .spinnerFade-leave-active {
+	transition: opacity .5s;
+}
+
+.spinnerFade-enter, .spinnerFade-leave-to {
+  opacity: 0;
+}
+
+.spinnerFade-move {
+	transition: transform 1s;
+}
+
+
+
+#homePageAboutMeContainer{
+	width: 100%;
+	height: 50%;
+	background-color: #000000;
 }
 
 /*----------------------------------------------------------------------------*/
