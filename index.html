@@ -12,103 +12,105 @@
       <canvas ref = "canvas" id ="canvas">
 
       </canvas>
-        <div v-if="pageLoaded" id = "header">
-          <div ref="myMenu" id = "">
-            <ul ref = "menuItems" id = "notMenuItems">
-                <li>
-                  <div id = "menuItem1">
-                   <!-- v-on:mouseover = "menuItem1Hover = true" v-onmouseleave = "menuItem1Hover = false"> -->
-                    <a href="index.html">
-                     <h1>Home</h1>
-                    </a>
-                  </div>
-                </li>
+      <div v-if="pageLoaded" id = "header">
+        <div ref="myMenu" id = "">
+          <ul ref = "menuItems" id = "notMenuItems">
+              <li>
+                <div id = "menuItem1">
+                  <!-- v-on:mouseover = "menuItem1Hover = true" v-onmouseleave = "menuItem1Hover = false"> -->
+                  <a href="index.html">
+                    <h1>Home</h1>
+                  </a>
+                </div>
+              </li>
 
-                <li>
-                  <div id = "artworkListItem" ref = "artworkListItem"
-                   v-on:mouseover = "artworkListItemHover = true" v-on:mouseleave = "artworkListItemHover = false">
-                      <div v-if="!artworkListItemHover" id = "artworkItem">
-                        <h1>Artwork-></h1>
-                      </div>
-                      <div v-else-if="artworkListItemHover" id="artworkItemHover">
-                        <h1>
-                          <div id= "ArtworkTag">
-                            Artwork:
-                          </div>
-                          <div id = "ThreeDLink">
-                            <a href = "index.html">3D,</a>
-                          </div>
-                          <div id = "TwoDLink">
-                            <a href = "index.html">2D,</a>
-                          </div>
-                          <div id = "VideoLink">
-                            <a href = "index.html">Video</a>
-                          </div>
-                        </h1>
-                      </div>
-                  </div>
-                </li>
-                <li>
-                  <div id = "menuItem3">
-                    <a href = "index.html">
-                      <h1>Item Number Three </h1>
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <div id = "menuItem4">
-                    <a href = "about.html">
-                      <h1>About me </h1>
-                    </a>
-                  </div>
-                </li>
-            </ul>
-          </div>
-          <div id = "nameHolder">
-             <h1 id = "myName" ref = myName>Hunter Rasmussen</h1>
-          </div>
-          <div id="menu_button" v-on:mouseover = "hoverMenu = true" v-on:mouseleave = "hoverMenu = false" v-on:click = "showMenuFunction">
-            <div v-if="!showMenu">
-
-              <div v-if="hoverMenu" id = "hoverMenu_true">
-                <p>{{menuhover}}</p>
-              </div>
-              <div v-else-if="!hoverMenu" id = "hoverMenu_false">
-                <p>{{menu}}<p>
-              </div>
-            </div>
-            <div v-else-if="showMenu" id ="showingMenu">
-              <p>{{menuDown}}</p>
-            </div>
-          </div>
-          <a href="index.html">
-            <img id = "logo" src = "SVG/rounded_dark.svg" height = "40px"
-                           ref = "mainLogo">
-          </a>
+              <li>
+                <div id = "artworkListItem" ref = "artworkListItem"
+                  v-on:mouseover = "artworkListItemHover = true" v-on:mouseleave = "artworkListItemHover = false">
+                    <div v-if="!artworkListItemHover" id = "artworkItem">
+                      <h1>Artwork</h1>
+                    </div>
+                    <div v-else-if="artworkListItemHover" id="artworkItemHover">
+                      <h1>
+                        <div id= "ArtworkTag">
+                          Artwork:
+                        </div>
+                        <div id = "ThreeDLink">
+                          <a href = "index.html">3D,</a>
+                        </div>
+                        <div id = "TwoDLink">
+                          <a href = "index.html">2D,</a>
+                        </div>
+                        <div id = "VideoLink">
+                          <a href = "index.html">Video</a>
+                        </div>
+                      </h1>
+                    </div>
+                </div>
+              </li>
+              <li>
+                <div id = "menuItem3">
+                  <a href = "temp.html">
+                    <h1>Item Number Three </h1>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div id = "menuItem4">
+                  <a href = "about.html">
+                    <h1>About me </h1>
+                  </a>
+                </div>
+              </li>
+          </ul>
         </div>
+        <h4 id = "nameMastHolder">
+          <div id = "nameHolder">          
+              <h1 id = "myName" ref = myName>Hunter Rasmussen</h1>
+              <img id = "mastImage" ref = mastImage src = "images/hunter1.png" ></img>
+          </div>
+        </h4>
         <div id = mastImageContainer>
-           <img id = "mastImage" src = "images/hunter1.png" ></img>
         </div>
+        <div id="menu_button" v-on:mouseover = "hoverMenu = true" v-on:mouseleave = "hoverMenu = false" v-on:click = "showMenuFunction">
+          <div v-if="!showMenu">
 
-        <div id = "nameToggle">
-          <div id = "spinnerHolder" v-on:mouseover = "nameDescriptionHover = true" 
-          v-on:mouseleave = "nameDescriptionHover = false">
-            
-            <!-- <transition name="spinnerFade"> -->
-              <h1 ref = "spinnerRef" id = "nameSpinner"  
-                v-on:click = "nameSpin" 
-                >
-                {{nameSpinnerOptions[curSpinnerIndex]}}
-              </h1>
-            <!-- </transition> -->
-            <h1 id = "nameSuffix">ER</h1>
-            <p v-if="nameDescriptionHover">{{nameSpinnerDescriptions[curSpinnerIndex]}}</p>
+            <div v-if="hoverMenu" id = "hoverMenu_true">
+              <p>{{menuhover}}</p>
+            </div>
+            <div v-else-if="!hoverMenu" id = "hoverMenu_false">
+              <p>{{menu}}<p>
+            </div>
+          </div>
+          <div v-else-if="showMenu" id ="showingMenu">
+            <p>{{menuDown}}</p>
           </div>
         </div>
+        <a href="index.html">
+          <img id = "logo" src = "SVG/rounded_dark.svg" height = "40px"
+                          ref = "mainLogo">
+        </a>
+      </div>
+      
 
-        <div id = "homePageAboutMeContainer">
-          <h1>aboutme</h1>
+      <div id = "nameToggle">
+        <div id = "spinnerHolder">
+          <div id = spinnerAligner v-on:mouseover = "nameDescriptionHover = true" 
+              v-on:mouseleave = "nameDescriptionHover = false">
+            <h1 ref = "spinnerRef" id = "nameSpinner"  
+              v-on:click = "nameSpin" 
+              >
+              {{nameSpinnerOptions[curSpinnerIndex]}}
+            </h1>
+          <h1 id = "nameSuffix">ER</h1>
+          </div>
         </div>
+        <p v-if="nameDescriptionHover">{{nameSpinnerDescriptions[curSpinnerIndex]}}</p>
+      </div>
+
+      <div id = "homePageAboutMeContainer">
+        <h1>aboutme</h1>
+      </div>
     </div>
 
  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>

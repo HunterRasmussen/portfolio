@@ -47,12 +47,14 @@ new Vue({
         this.$refs.mainLogo.id = "logo";
         this.$refs.menuItems.id = "notMenuItems";
         this.$refs.myName.id = "myName";
+        this.$refs.mastImage.id = "mastImage";
       }
       else{
         this.$refs.myMenu.id = "menuDropDown";
         this.$refs.mainLogo.id = "logoWithMenu";
         this.$refs.menuItems.id = "menuItems";
         this.$refs.myName.id = "myNameWithMenu";
+        this.$refs.mastImage.id = "mastImageWithMenu";
       }
 
       // console.log(this.$refs);

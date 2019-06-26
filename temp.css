@@ -1,0 +1,55 @@
+
+#one{
+    position: -webkit-sticky; /* Required for Safari */
+    position: sticky;
+    text-align: right;
+    height: 50px;
+    margin-top: 100vh;
+    top: 50%;
+    padding-right: 35vw;
+}
+
+#two{
+    position: -webkit-sticky; /* Required for Safari */
+    position: sticky;
+    text-align: right;
+    height: 50px;
+    margin-top: 100vh;
+    top: 50%;
+    padding-right: 35vw;
+
+}
+
+#three{
+    position: -webkit-sticky; /* Required for Safari */
+    position: sticky;
+    text-align: right;
+    height: 50px;
+    margin-top: 100vh;
+    top: 50%;
+    padding-right: 35vw;
+
+}
+
+#four{
+    position: -webkit-sticky; /* Required for Safari */
+    position: sticky;
+    text-align: right;
+    height: 50px;
+    margin-top: 100vh;
+    top: 50%;
+    padding-right: 35vw;
+
+}
+
+#five{
+    position: -webkit-sticky; /* Required for Safari */
+    position: sticky;
+    text-align: right;
+    height: 50px;
+    margin-top: 100vh;
+    top: 50%;
+    /* margin-bottom: 0vh; */
+    padding-right: 35vw; 
+
+}

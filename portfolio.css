@@ -6,16 +6,23 @@ body {
 
 #header {
 		background: linear-gradient(to right, #b5d1ff , #360082);
-    height: 700px;
+		/* height: 700px; */
+		height:100vh;
     width: 100%;
 
+}
+
+#nameMastHolder{
+	display: inline-block;
 }
 
 #nameHolder{
 	position: absolute;
 	left: 0px;
 	top: 0px;
-	min-width: 100%;
+	width: 100%;
+	height: 1vh;
+	display: inline-block;
 }
 
 /*----------------------------MY NAME--------------------------
@@ -23,16 +30,21 @@ body {
 ---------------------------------------------------------------*/
 #myName {
 	color: #1e1e1e;
-	max-width: 100%;
-	max-height: 450px;
-	position: absolute;
+	/* position: absolute; */
+	width: auto;
 	padding-left: 10%;
-	padding-top: 18%;
+	padding-top: 25%;
 	margin: 0px;
 	font-family: 'Nunito', sans-serif;
 	font-style: bold;
-	font-size: 45px;
-	text-align: center;
+	float: left;
+	/* clear: left; */
+	/* font-size: calc([14px] + 
+					([maximum size] - [minimum size]) * 
+					((100vw - [minimum viewport width]) / 
+					([maximum viewport width] - [minimum viewport width]))); */
+	font-size: calc(32px + (32 - 26) * ((100vw - 300px) / (1600 - 300)));
+	/* text-align: center; */
 	font-weight: normal;
 	text-transform: uppercase;
 	letter-spacing: 0.0000em;
@@ -42,7 +54,7 @@ body {
 	animation-duration: 1.0s;
 	animation-delay: 0.0s;
 	animation-fill-mode: forwards;
-	cubic-bezier(.215,.61,.355,1)
+	/* cubic-bezier(.215,.61,.355,1) */
 }
 @keyframes showMyName {
 	0%{
@@ -58,28 +70,71 @@ body {
 		opacity: 1;
 	}
 }
+
+
+
+#mastImage{ 
+	height: 65vh; 
+	width: auto;
+	float: right;
+	clear: right;
+	/* display: inline; */
+	margin-top: 12%;
+	padding-right: 7%;
+	filter: drop-shadow(10px 7px 8px #000000);
+	animation-name: showMyName;
+	animation-duration: 1.0s;
+	animation-delay: 0.0s;
+	animation-fill-mode: forwards;
+	/* cubic-bezier(.215,.61,.355,1) */
+}
+
+
 #myNameWithMenu{
+
 	color: #1e1e1e;
-	max-width: 100%;
-	max-height: 0px;
-	position: absolute;
+	/* position: absolute; */
+	width: auto;
 	padding-left: 10%;
-	padding-top: 20%;
+	padding-top: 25%;
 	margin: 0px;
 	font-family: 'Nunito', sans-serif;
 	font-style: bold;
-	font-size: 45px;
-	text-align: center;
+	float: left;
+	/* clear: left; */
+	/* font-size: calc([14px] + 
+					([maximum size] - [minimum size]) * 
+					((100vw - [minimum viewport width]) / 
+					([maximum viewport width] - [minimum viewport width]))); */
+	font-size: calc(32px + (32 - 26) * ((100vw - 300px) / (1600 - 300)));
+	/* text-align: center; */
 	font-weight: normal;
 	text-transform: uppercase;
 	letter-spacing: 0.0000em;
-	/* filter: drop-shadow(4px -3px 10px #000000); */
+	cursor: default;
+	/* filter: drop-shadow(7px -3px 4px #000000); */	
 	opacity: 0;
 	animation-name: hideMyName;
 	animation-duration: 1.0s;
 	animation-delay: 0.0s;
 	animation-fill-mode: forwards;
-	cubic-bezier(.215,.61,.355,1)
+	/* cubic-bezier(.215,.61,.355,1) */
+}
+
+#mastImageWithMenu{
+	opacity: 0;
+	height: 0vh; 
+	width: auto;
+	float: right;
+	clear: right;
+	margin-top: 12%;
+	padding-right: 7%;
+	filter: drop-shadow(10px 7px 8px #000000);
+	animation-name: hideMyName;
+	animation-duration: 1.0s;
+	animation-delay: 0.0s;
+	animation-fill-mode: forwards;
+
 }
 @keyframes hideMyName {
 	0%{
@@ -102,7 +157,7 @@ body {
 	/*background-color: black;*/
 	/*opacity: 0;*/
 	width: 100%;
-	height: 700px;
+	height: 100vh;
 	position: absolute;
 	left: 0%;
 	top: 0%;
@@ -129,6 +184,16 @@ body {
 	transition-timing-function: ease-in-out;
 
 }
+
+
+/*----------------------------Menu----------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+---------------------------------------------------------------*/
 
 
 #menu {
@@ -170,41 +235,43 @@ body {
 
 #hoverMenu_true p {
 	text-shadow: 2px 2px 6px #4e4e4e;
-	font-size: 18px;
+	font-size: 1.5vw;
 	transition: .25s;
 
 }
 
 
 #hoverMenu_false p {
-	font-size: 18px;
+	font-size: 1.5vw;
+	/* font-size: 18px; */
 	transition: .25s;
 	text-orientation: upright;
 }
 
 #showingMenu p {
-	font-size: 18px;
+	font-size: 1.5vw;
+	/* font-size: 18px; */
 	transition: .25s;
 	text-orientation: upright;
 }
 
 #showingMenu p:hover{
 	text-shadow: 2px 2px 6px #4e4e4e;
-	font-size: 18px;
+	font-size: 1.5vw;
 }
 
 
 #menuDropDown{
   width: 100%;
-  height: 500px;
+  height: 100vh;
   background-color: white;
   padding: none;
   animation-name: menuBounce;
   animation-duration: 1.5s;
   animation-delay: 0s;
   animation-fill-mode: forwards;
-  cubic-bezier(.215,.61,.355,1)
-  /*transition: translateY 2s;*/
+  /* cubic-bezier(.215,.61,.355,1) */
+  transition: translateY 2s;
 
 
 }
@@ -222,6 +289,7 @@ body {
 
 #notMenuItems{
 	visibility: hidden;
+	opacity: 0;
 	position: absolute;
 }
 
@@ -229,8 +297,8 @@ body {
 	position: absolute;
 	left: 7%;
 	top: 20%;
-	min-width: 35%
-	line-height: 50px;
+	min-width: 35%;
+	line-height: 8.3vh;
 	list-style-type: none;
 }
 
@@ -241,6 +309,7 @@ body {
 	animation-duration: 2s;
 	animation-fill-mode: forwards;
 	font-family: 'Nunito', sans-serif;
+	font-size: 1.5vw;
 
 
 }
@@ -263,9 +332,13 @@ body {
 	transition: .5s;
 	cursor: default;
 }
+
+
+
 #ThreeDLink{
 	/* float:left; */
-	position: absolute;
+	/* position: absolute; */
+	display: inline;
 	top: 1px;
 	left: 140px;
 	padding-left: 20px;
@@ -279,10 +352,11 @@ body {
 
 #TwoDLink{
 	/* float:left; */
-	position: absolute;
+	/* position: absolute; */
+	display: inline;
 	top: 1px;
 	left: 205px;
-	padding-left: 15px;
+	/* padding-left: 15px; */
 	transition: .5s;
 }
 #TwoDLink :hover{
@@ -292,10 +366,11 @@ body {
 
 #VideoLink{
 	/* float: left; */
-	position: absolute;
+	/* position: absolute; */
+	display: inline;
 	top: 1px;
 	left: 260px;
-	padding-left: 15px;
+	/* padding-left: 15px; */
 	transition: .5s;
 }
 #VideoLink :hover{
@@ -351,77 +426,44 @@ body {
 	}
 }
 
-.parallax {
-  /* The image used */
-  background-image: url("img_parallax.jpg");
 
-  /* Set a specific height */
-  height: 500px;
+/*----------------------Close Menu----------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+---------------------------------------------------------------*/
 
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#mastImageContainer{
-	width: 30%;
-	float: right;
-}
-
-#mastImage{ 
-	/*background-image: url("images/hunter1.png");*/
-	/* height: 750px; */
-	  /* Create the parallax scrolling effect */
-	/* background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover; */
-
-	/* max-width: 65%; */
-	
-	height: 450px; 
-	width: auto;
-	float: right;
-	margin-top: -110%;
-	padding-right: 20%;
-	filter: drop-shadow(10px 7px 8px #000000);
-	animation-name: showMyName;
-	animation-duration: 1.0s;
-	animation-delay: 0.0s;
-	animation-fill-mode: forwards;
-	cubic-bezier(.215,.61,.355,1)
-}
-@keyframes bobDown {
-	0%{
-		transform: translateY(0px);
-	}
-	50%{
-		transform: translateY(10px);
-	}
-	100%{
-		transform: translateY(0px);
-	}
-}
 
 #nameToggle{
 	height: 50%;
 	width: 100%;
+	background-color: gray;
 }
 
 #spinnerHolder{
-	margin-top: 10%;
-	margin-left: 50%;
+	/* margin-top: 10%; */
+	/* margin-left: 50%; */
+	padding-top: 10%;
+	width: 100vw;
+
+}
+
+#spinnerAligner{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 #nameSpinner{
-	display: inline;
+	/* display: inline; */
 	cursor: pointer;
 	text-align: center;
 }
 #nameSuffix{
-	text-align: center
+	text-align: center;
 	display: inline;
 	
 }
@@ -432,7 +474,7 @@ body {
 	animation-duration: 1.0s;
 	animation-delay: 0.0s;
 	animation-fill-mode: both;
-	cubic-bezier(.215,.61,.355,1)
+	/* cubic-bezier(.215,.61,.355,1) */
 	display: inline-block;
 }
 
@@ -1141,7 +1183,7 @@ rect{
 	animation: rectTestAnim 3s linear infinite;
 	opacity: 1;
 	background-color: red;
-	fill:{black}
+	fill: black;
 }
 
 @keyframes rectTestAnim {
