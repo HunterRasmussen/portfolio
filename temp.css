@@ -1,4 +1,11 @@
 
+
+#oneHolder{
+    position: -webkit-sticky; /* Required for Safari */
+    position: sticky;
+    top: 50%;
+}
+
 #one{
     position: -webkit-sticky; /* Required for Safari */
     position: sticky;
@@ -52,4 +59,9 @@
     /* margin-bottom: 0vh; */
     padding-right: 35vw; 
 
+}
+
+
+#break{
+    height: 100vh;
 }

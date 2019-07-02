@@ -43,7 +43,8 @@ body {
 					([maximum size] - [minimum size]) * 
 					((100vw - [minimum viewport width]) / 
 					([maximum viewport width] - [minimum viewport width]))); */
-	font-size: calc(32px + (32 - 26) * ((100vw - 300px) / (1600 - 300)));
+	font-size: 4vw;
+	/* font-size: calc(32px + (32 - 26) * ((100vw - 300px) / (1600 - 300))); */
 	/* text-align: center; */
 	font-weight: normal;
 	text-transform: uppercase;
@@ -123,14 +124,14 @@ body {
 
 #mastImageWithMenu{
 	opacity: 0;
-	height: 0vh; 
+	height: 65vh; 
 	width: auto;
 	float: right;
 	clear: right;
 	margin-top: 12%;
 	padding-right: 7%;
 	filter: drop-shadow(10px 7px 8px #000000);
-	animation-name: hideMyName;
+	animation-name: hideMastImage;
 	animation-duration: 1.0s;
 	animation-delay: 0.0s;
 	animation-fill-mode: forwards;
@@ -147,6 +148,21 @@ body {
 	}
 	100%{
 		transform: translateY(-80%);
+		opacity: 0;
+	}
+}
+
+@keyframes hideMastImage {
+	0%{
+		transform: translateY(0px);
+		opacity: 1;
+	}
+	50%{
+		transform: translateY(-10%);
+		opacity: 0;
+	}
+	100%{
+		transform: translateY(-200%);
 		opacity: 0;
 	}
 }
@@ -205,8 +221,8 @@ body {
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	height: 200px;
-	width: 150px;
+	height: auto;
+	width: 10vw;
 	text-align: center;
 	padding-left: 10px;
 	vertical-align: middle;
@@ -218,11 +234,13 @@ body {
 }
 
 #hoverMenu_false{
+	/* padding-top: 1vh;  */
 	transition: .25s;
 	font-size: 220px;
 }
 
 #hoverMenu_true{
+	/* padding-top: 1vh;  */
 	transform: rotate(90deg);
 	transition: .25s;
 
