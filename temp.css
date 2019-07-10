@@ -1,19 +1,56 @@
 
 
 #oneHolder{
-    position: -webkit-sticky; /* Required for Safari */
-    position: sticky;
-    top: 50%;
+    /* position: -webkit-sticky; /* Required for Safari */
+    /* position: sticky; */
+    /* top: 50%;  */
 }
 
+#spacer {
+    height: 1px;
+    position: relative;
+    margin-bottom: 80vh;
+}
+
+#oneBot{
+    height: 50%;
+    position: relative;
+}
+
+#oneTop{
+    height: 1px;
+    position: relative;
+    margin-bottom: 50vh;
+}
+
+#twoBot{
+    height: 50%;
+    position: relative;
+}
+
+#twoTop{
+    height: 50%;
+    position: relative;
+}
+
+
+
 #one{
-    position: -webkit-sticky; /* Required for Safari */
-    position: sticky;
+    /* position: -webkit-sticky; /* Required for Safari */
+    /* position: sticky; */
     text-align: right;
     height: 50px;
-    margin-top: 100vh;
     top: 50%;
-    padding-right: 35vw;
+    padding-right: 35vw; 
+}
+
+#one .sticky {
+    position: -webkit-sticky; /* Required for Safari */
+    position: sticky; 
+    text-align: right;
+    height: 50px;
+    padding-right: 35vw; 
+
 }
 
 #two{
