@@ -18,18 +18,27 @@ new Vue({
 })
 
 const $marker = document.querySelector("#oneTop");
-const $stickyElement = document.querySelector("#one");
+const $elementOne = document.querySelector("#one");
+const $markerTwo = document.querySelector("#oneBot");
+const $elementTwo = document.querySelector("#two");
 
 const stickyHeader = () => function() {
   const sr1 = $marker.getBoundingClientRect();
-  const sr2 = $stickyElement.getBoundingClientRect();
+  const srTwo = $markerTwo.getBoundingClientRect();
 
-  if (sr1.top > 0) { //marker has reached top
-    $stickyElement.classList.remove("sticky");
+  if (sr1.top > 0) { //marker isn't at top
+    $elementOne.classList.remove("sticky");
     $marker.style.top = 0;
   } else {
-    $stickyElement.classList.add("sticky");
+    $elementOne.classList.add("sticky");
     $marker.style.top = -1;
+  }
+  if(srTwo.top > 0) {
+      $elementTwo.classList.remove("sticky");
+  }
+  else{
+    $elementTwo.classList.add("sticky");
+    $markerTwo.style.top = -1;
   }
 };
 
