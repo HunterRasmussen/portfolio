@@ -1,7 +1,10 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel = "stylesheet" href = "portfolio.css">
     <title>  Hunter Rasmussen </title>
     <link rel = "icon" type = "image/png" href = "SVG/rounded_dark.svg">
@@ -38,7 +41,7 @@
                           Artwork:
                         </div>
                         <div id = "ThreeDLink">
-                          <a href = "index.html">3D,</a>
+                          <a href = "contact.php">3D,</a>
                         </div>
                         <div id = "TwoDLink">
                           <a href = "index.html">2D,</a>
@@ -68,7 +71,8 @@
         </div>
         <h4 id = "nameMastHolder">
           <div id = "nameHolder">          
-              <h1 id = "myName" ref = myName>Hunter Rasmussen</h1>
+              <h1 id = "firstName" ref = firstName>Hunter </h1>
+              <h1 id = "lastName" ref = lastName>Rasmussen</h1>
               <img id = "mastImage" ref = mastImage src = "images/hunter1.png" ></img>
           </div>
         </h4>
@@ -94,8 +98,27 @@
         </a>
       </div>
       
+    <div id = "postMast">
+      <section>
+        <div id = "miniBio">
+          <div id = "portraitHolder">
+            <img src = "./images/_Sam.png" id = "portrait"></img>
+          </div>
+          <p id = "aboutme">Hi!  I'm Hunter.  Sometimes, I like to go by Hans. I like to learn new things, code, and create art.</p>
+        </div>
+      </section>
+  </div>
 
-      <div id = "nameToggle">
+  <div id = "footerWrapper">
+    <div id = "footer">
+      <a href="https://www.linkedin.com/in/hunter-rasmussen-2432a66b?trk=people-guest_people_search-card" class="fa fa-linkedin" id = "footerLink"></a>
+      <a href="https://twitter.com/razdoctor" class="fa fa-twitter"  id = "footerLink"></a>
+      <a href="https://github.com/HunterRasmussen"><img src = "./images/GitHub-Mark-Light-32px.png" id = "githubLink"></img></a>
+      <p id = "footerNameplate">Hunter Rasmussen | 2020 | hunterhrasmussen@gmail.com</p>
+     </div>
+   </div>
+
+      <!-- <div id = "nameToggle">
         <div id = "spinnerHolder">
           <div id = spinnerAligner v-on:mouseover = "nameDescriptionHover = true" 
               v-on:mouseleave = "nameDescriptionHover = false">
@@ -108,13 +131,14 @@
           </div>
         </div>
         <p v-if="nameDescriptionHover">{{nameSpinnerDescriptions[curSpinnerIndex]}}</p>
-      </div>
+      </div> -->
 
-      <div id = "homePageAboutMeContainer">
+      <!-- <div id = "homePageAboutMeContainer">
         <h1>aboutme</h1>
       </div>
-    </div>
+    </div> -->
 
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
  <script src="vue.js"></script>

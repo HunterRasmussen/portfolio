@@ -1,3 +1,6 @@
+
+
+
 new Vue({
 
   el: '#root',
@@ -46,14 +49,16 @@ new Vue({
         this.$refs.myMenu.id = "menuHidden";
         this.$refs.mainLogo.id = "logo";
         this.$refs.menuItems.id = "notMenuItems";
-        this.$refs.myName.id = "myName";
+        this.$refs.firstName.id = "firstName";
+        this.$refs.lastName.id = "lastName"
         this.$refs.mastImage.id = "mastImage";
       }
       else{
         this.$refs.myMenu.id = "menuDropDown";
         this.$refs.mainLogo.id = "logoWithMenu";
         this.$refs.menuItems.id = "menuItems";
-        this.$refs.myName.id = "myNameWithMenu";
+        this.$refs.firstName.id = "firstNameWithMenu";
+        this.$refs.lastName.id = "lastNameWithMenu";
         this.$refs.mastImage.id = "mastImageWithMenu";
       }
 
@@ -267,4 +272,17 @@ new Vue({
 
 
 
+})
+
+$(document).on("scroll", function () {
+  var pageTop = $(document).scrollTop()
+  var pageBottom = pageTop + $(window).height() * 7/8
+  var tags = $("section") 
+
+  for (var i = 0; i < tags.length; i++) {
+    var tag = tags[i]
+    if ($(tag).position().top < pageBottom) { 
+      $(tag).addClass("visible")
+  }
+}
 })
