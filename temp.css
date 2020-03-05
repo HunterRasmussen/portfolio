@@ -1,29 +1,56 @@
 
 
 #oneHolder{
+    /* position: -webkit-sticky; /* Required for Safari */
+    /* position: sticky; */
+    /* top: 50%;  */
+}
+
+#spacer {
+    height: 1px;
+    position: relative;
+    margin-bottom: 80vh;
+}
+
+#oneTop{
+    height: 1px;
+    position: relative;
+    margin-bottom: 50vh;
+}
+
+#oneBot{
+    height: 1px;
+    margin-bottom: 55vh;
+    position: relative;
+}
+
+#twoBot{
+    height: 50%;
+    position: relative;
+}
+
+.sticky {
     position: -webkit-sticky; /* Required for Safari */
-    position: sticky;
+    position: sticky; 
+    text-align: right;
     top: 50%;
+    height: 50px;
+    padding-right: 35vw; 
+
 }
 
 #one{
-    position: -webkit-sticky; /* Required for Safari */
-    position: sticky;
+    /* position: -webkit-sticky; /* Required for Safari */
+    /* position: sticky; */
     text-align: right;
     height: 50px;
-    margin-top: 100vh;
-    top: 50%;
-    padding-right: 35vw;
+    padding-right: 35vw; 
 }
 
 #two{
-    position: -webkit-sticky; /* Required for Safari */
-    position: sticky;
     text-align: right;
     height: 50px;
-    margin-top: 100vh;
-    top: 50%;
-    padding-right: 35vw;
+    padding-right: 35vw; 
 
 }
 
