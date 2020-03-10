@@ -21,7 +21,6 @@ new Vue({
     menuShow: false,
     hoverMenu: false,
     showMenu: false,
-    artworkListItemHover: false,
 
     //firefly stuff
     context: '',

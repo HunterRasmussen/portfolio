@@ -28,42 +28,23 @@
                   </a>
                 </div>
               </li>
-
-              <li>
-                <div id = "artworkListItem" ref = "artworkListItem"
-                  v-on:mouseover = "artworkListItemHover = true" v-on:mouseleave = "artworkListItemHover = false">
-                    <div v-if="!artworkListItemHover" id = "artworkItem">
-                      <h1>Artwork</h1>
-                    </div>
-                    <div v-else-if="artworkListItemHover" id="artworkItemHover">
-                      <h1>
-                        <div id= "ArtworkTag">
-                          Artwork:
-                        </div>
-                        <div id = "ThreeDLink">
-                          <a href = "contact.php">3D,</a>
-                        </div>
-                        <div id = "TwoDLink">
-                          <a href = "index.html">2D,</a>
-                        </div>
-                        <div id = "VideoLink">
-                          <a href = "index.html">Video</a>
-                        </div>
-                      </h1>
-                    </div>
-                </div>
-              </li>
               <li>
                 <div id = "menuItem3">
-                  <a href = "temp.html">
-                    <h1>Item Number Three </h1>
+                  <a href = "about.html">
+                    <h1>About</h1>
                   </a>
                 </div>
               </li>
               <li>
+                <div id = "artworkListItem" ref = "artworkListItem">
+                      <a href = "artwork.html">
+                        <h1>Artwork</h1>
+                      </a>
+              </li>
+              <li>
                 <div id = "menuItem4">
-                  <a href = "about.html">
-                    <h1>About me </h1>
+                  <a href = "videos.html">
+                    <h1>Videos</h1>
                   </a>
                 </div>
               </li>
@@ -102,9 +83,9 @@
       <section>
         <div id = "miniBio">
           <div id = "portraitHolder">
-            <img src = "images/sam.png" id = "portrait"></img>
+            <img src = "images/cropped_portrait_me_circle.png" id = "portrait"></img>
           </div>
-          <p id = "aboutme">Hi!  I'm Hunter.  Sometimes, I like to go by Hans. I like to learn new things, code, and create art.</p>
+          <p id = "aboutme">Hi!  I'm Hunter.  Sometimes, I like to go by Hans or Bunther. I like to learn new things, code, and create art.</p>
         </div>
       </section>
   </div>
