@@ -2,6 +2,13 @@ body {
 	background-color : #594773;
   margin: 0px;
   text-align: center;
+  font-family: 'Nunito', sans-serif;
+
+}
+
+p {
+  font-family: 'Nunito', sans-serif;
+
 }
 
 #top {
@@ -31,7 +38,7 @@ body {
 
   }
 
-  a:hover {
+  li a:hover {
       /* background-color: #3b3a39; */
       cursor: pointer;
       /* text-decoration: underline; */
@@ -73,7 +80,41 @@ transform: translate(0, 0);
 opacity: 1;
 }
 
-#portrait {
-	max-width:100%;
+#portraitHolder {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+#grid
+{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 16px;
+  grid-row-gap: 16px; 
+  padding-top: 10vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+#aboutme{
+  grid-area: 1 / 2 / 2 / 2;
+  display: flex;
+	justify-content: left;
+  align-items: center;
+  padding-top: -3px;
+  font-size: 2ex;
+  text-decoration: none;
+}
+
+#aboutme a {
+  grid-area: auto;
+  /* position: fixed; */
+  text-decoration: none;
+  /* text-align: end; */
+  text-align: justify;
+}
+
+#img1 {
+  max-width:70%;
     height:auto;
 }
