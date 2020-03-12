@@ -20,6 +20,7 @@ p {
     padding: 0;
     overflow: hidden;
     background-color: #dddddd;
+    font-size: 28px;
   }
   
   li {
@@ -170,7 +171,7 @@ opacity: 1;
   text-align: left;
   /* text-justify: left; */
   /* padding-top: 2vh; */
-  font-size: 100%;
+  /* font-size: 100%; */
   /* margin-top: -20vh; */
 } 
 
@@ -190,7 +191,7 @@ opacity: 1;
   text-align: left;
   /* text-justify: left; */
   /* padding-top: 2vh; */
-  font-size: 100%;
+  /* font-size: 100%; */
   /* margin-left: -2vw; */
   margin-top: -2vh;
 } 
