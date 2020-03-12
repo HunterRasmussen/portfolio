@@ -80,8 +80,27 @@ transform: translate(0, 0);
 opacity: 1;
 }
 
-#portraitHolder {
-  grid-area: 1 / 1 / 2 / 2;
+section {
+  opacity: 0;
+  /* transition: opacity 1s; */
+  transform: translate(0, 20px); 
+  transition: all 1s;
+  }
+  
+section.visible { 
+transform: translate(0, 0); 
+opacity: 1;
+}
+
+.loadin {
+  opacity: 0;
+  /* transition: opacity 1s; */
+  transform: translate(0, 20px); 
+  transition: all 1s;
+}
+.loadin.visible {
+  transform: translate(0, 0); 
+opacity: 1;
 }
 
 #grid
@@ -89,24 +108,35 @@ opacity: 1;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 16px;
-  grid-row-gap: 16px; 
+  grid-column-gap: 0px;
+  grid-row-gap: 30px; 
   padding-top: 10vh;
-  padding-left: 5vw;
-  padding-right: 5vw;
+  padding-left: 7vw;
+  padding-right: 7vw;
 }
 
 #aboutme{
-  grid-area: 1 / 2 / 2 / 2;
+  grid-area: 1 / 2 / 1 / 2;
   display: flex;
-	justify-content: left;
-  align-items: center;
-  padding-top: -3px;
-  font-size: 2ex;
+	/* justify-content: center; */
+  /* align-items: center; */
+  text-align: left;
+  /* padding-top: -3px; */
+  font-size: 14px;
   text-decoration: none;
+  /* max-height: 290px; */
+  /* margin-left: -2vw; */
 }
 
-#aboutme a {
+ #text1 {
+  text-align: left;
+  /* text-justify: left; */
+  /* padding-top: 2vh; */
+  /* font-size: 80%; */
+  /* margin-left: -2vw; */
+} 
+
+#resumeLink {
   grid-area: auto;
   /* position: fixed; */
   text-decoration: none;
@@ -114,7 +144,54 @@ opacity: 1;
   text-align: justify;
 }
 
+
 #img1 {
+  grid-area: 1 / 1 / 2 / 2;
+
   max-width:70%;
     height:auto;
+    padding: 10px;
+    padding-top: 4vh;
 }
+
+#sketchHolder {
+  grid-area: 2 / 2 / 3 / 3;
+
+}
+
+#img2 {
+  max-width:100%;
+    height:auto;
+    margin-top: -30px;
+
+}
+
+#text2 {
+  text-align: left;
+  /* text-justify: left; */
+  /* padding-top: 2vh; */
+  font-size: 14px;
+  transition-delay: .5s;
+  /* margin-top: -20vh; */
+} 
+
+#img3Holder {
+  margin-left: -3vw;
+}
+
+#img3 {
+  grid-area: 3 / 1 / 3 / 3;
+
+  max-width:70%;
+    height:auto;
+    padding: 10px;
+}
+
+#text3 {
+  text-align: left;
+  /* text-justify: left; */
+  /* padding-top: 2vh; */
+  font-size: 14px;
+  /* margin-left: -2vw; */
+  /* margin-top: -20vh; */
+} 
