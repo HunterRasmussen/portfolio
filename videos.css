@@ -60,3 +60,11 @@ body {
     width: 60%;
     display: inline-block;
   }
+
+  #astro {
+    grid-area: 1 / 1 / 2 / 2;
+    max-width:75%;
+    height:auto;
+    padding: 1px;
+    padding-top: 4vh;
+  }
