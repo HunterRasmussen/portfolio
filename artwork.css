@@ -4,7 +4,7 @@ body {
   text-align: center;
 }
 
-p, h1 {
+p, h1, h3 {
   font-family: 'Nunito', sans-serif;
 
 }
@@ -84,15 +84,31 @@ p, h1 {
   padding-left: 7vw;
   padding-right: 7vw;
   align-content: center;
-  padding-top: 2vh;
-  font-size: 20px;
+  /* padding-top: 2vh; */
+  font-size: 14px;
   }
 
   .images {
     max-width:75%;
     height:auto;
     padding: 1px;
-    padding-top: 4vh;
+    /* padding-top: 4vh; */
+  }
+  
+  .subtext {
+    padding-left: 7vw;
+  padding-right: 7vw;
+  font-size: 14px;
+    margin-top: 0vh;
+    margin-bottom: 0px;
+
+  }
+
+  .subheader
+  {
+    padding-top: 5vh;
+    padding-bottom: -2vh;
+    margin-bottom: 0px;
   }
 
   #hunterSketch
@@ -106,7 +122,9 @@ p, h1 {
 
   }
 
-
+  #astro1 {
+    padding-top: 5px;
+  }
 
   #footerWrapper {
     text-align: center;

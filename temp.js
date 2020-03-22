@@ -25,6 +25,7 @@ const $elementTwo = document.querySelector("#two");
 const stickyHeader = () => function() {
   const sr1 = $marker.getBoundingClientRect();
   const srTwo = $markerTwo.getBoundingClientRect();
+  const 
 
   if (sr1.top > 0) { //marker isn't at top
     $elementOne.classList.remove("sticky");
@@ -38,6 +39,10 @@ const stickyHeader = () => function() {
   }
   else{
     $elementTwo.classList.add("sticky");
+    $elementOne.classList.remove("sticky");
+    $elementOne.classList.add("pushed");
+    $elementOne.style.top = 50% - 
+
     $markerTwo.style.top = -1;
   }
 };

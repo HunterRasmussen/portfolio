@@ -39,6 +39,15 @@
 
 }
 
+.pushed {
+    position: -webkit-sticky; /* Required for Safari */
+    position: sticky; 
+    text-align: right;
+    top: 50%;
+    height: 50px;
+    padding-right: 35vw; 
+}
+
 #one{
     /* position: -webkit-sticky; /* Required for Safari */
     /* position: sticky; */
