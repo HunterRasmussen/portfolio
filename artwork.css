@@ -78,6 +78,16 @@ p, h1, h3 {
     border-style: solid;
   }
 
+  #backToTop
+  {
+    position: fixed;
+    left: 2vw;
+    top: 7vh;
+    text-decoration: none;
+    color: #dddddd;
+    
+  }
+
   #headerText {
   /* text-justify: left; */
   text-align: center;
