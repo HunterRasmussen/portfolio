@@ -20,7 +20,6 @@ p {
     padding: 0;
     overflow: hidden;
     background-color: #dddddd;
-    font-size: 28px;
   }
   
   li {
@@ -66,7 +65,7 @@ p {
   #content {
     background-color: white;
     width: 60vw;
-    height: 89vh;
+   /* height: 89vh;*/
     display: inline-block;
   }
 
@@ -118,7 +117,7 @@ opacity: 1;
 }
 
 #aboutme{
-  grid-area: 1 / 2 / 1 / 2;
+  /*grid-area: 1 / 2 / 1 / 2;*/
   display: flex;
 	/* justify-content: center; */
   /* align-items: center; */
@@ -135,7 +134,9 @@ opacity: 1;
   text-align: left;
   /* text-justify: left; */
   padding-top: 2vh;
-  font-size: 20px;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  font-size: 16px;
   /* margin-left: -2vw; */
 } 
 
@@ -149,11 +150,15 @@ opacity: 1;
 
 
 #img1 {
-  grid-area: 1 / 1 / 2 / 2;
-  max-width:75%;
+  /*grid-area: 1 / 1 / 2 / 2;*/
+  float: left;
+  max-width: 50%;
   height:auto;
-  padding: 1px;
+  padding-bottom: 10px;
+  padding-left: 4vw;
+  padding-right: 2vw;
   padding-top: 4vh;
+  /* align-self: center; */
 }
 
 #sketchHolder {
